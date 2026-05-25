@@ -1,57 +1,344 @@
-.container { width: 90%;
-     margin: auto; 
-     padding: 40px 0; 
-    
-} 
-    
-.cachoeira-box { 
-    display: flex; gap: 40px; 
-    margin-bottom: 60px; 
-    align-items: center;
-} 
-     
-.card-grande { width: 50%;
-    background: #fff;
-    border-radius: 10px; 
-    overflow: hidden; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-} 
-         
-.card-grande img { 
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-} 
-             
-.card-grande h3 {
-    text-align: center;
-    padding: 15px;
-} 
-        
-.info {
-    width: 50%; 
+/* ── HERO DA PÁGINA ── */
+.page-hero {
+  position: relative;
+  height: 55vh;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
 }
-                    
-.info h2 {
-    margin-bottom: 10px;
-}
-                        
-.info p { 
-    margin-bottom: 15px;
-    line-height: 1.6;
-} 
-                             
-iframe { 
-    width: 100%;
-    height: 250px;
-    border: none;
-    border-radius: 10px;
-} 
-            
-@media (max-width: 768px) { 
 
-    .cachoeira-box { 
-        flex-direction: column;
-    }
-    .card-grande, .info { width: 100%; }
-}  
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(0,25,0,0.6) 0%, rgba(0,40,0,0.5) 100%),
+    url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1400&q=85') center/cover no-repeat;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 24px;
+  animation: fadeUp 0.8s ease both;
+  margin-top: 80px;
+}
+
+.page-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 7vw, 80px);
+  font-weight: 900;
+  color: white;
+  line-height: 1;
+  margin: 12px 0 16px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+.page-hero-content p {
+  color: rgba(255,255,255,0.82);
+  font-size: clamp(14px, 2vw, 17px);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── INTRO STATS ── */
+.cachoeiras-intro {
+  background: var(--verde);
+  padding: 32px 0;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.intro-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 16px;
+  border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.intro-stat:last-child { border-right: none; }
+
+.intro-stat strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--laranja);
+  margin-bottom: 4px;
+}
+
+.intro-stat span {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.5px;
+}
+
+/* ── LISTAGEM ── */
+.cachoeiras-lista {
+  padding: 80px 0;
+  background: var(--off-white);
+}
+
+/* ── CARD DE CACHOEIRA ── */
+.cachoeira-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: white;
+  border-radius: var(--radius-grande);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  margin-bottom: 48px;
+  transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.cachoeira-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-forte);
+}
+
+.cachoeira-card.invertido {
+  direction: rtl;
+}
+
+.cachoeira-card.invertido > * {
+  direction: ltr;
+}
+
+/* Foto */
+.cachoeira-foto {
+  position: relative;
+  overflow: hidden;
+  min-height: 380px;
+}
+
+.cachoeira-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.cachoeira-card:hover .cachoeira-foto img {
+  transform: scale(1.05);
+}
+
+.cachoeira-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--laranja);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+
+/* Info */
+.cachoeira-info {
+  padding: 44px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cachoeira-topo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cachoeira-numero {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--cinza-claro);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cachoeira-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: var(--off-white);
+  color: var(--cinza-texto);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 100px;
+  border: 1px solid var(--cinza-claro);
+}
+
+.cachoeira-info h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 2.5vw, 30px);
+  color: var(--preto);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.cachoeira-info > p {
+  color: var(--cinza-texto);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Detalhes */
+.cachoeira-detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 0;
+  border-top: 1px solid var(--cinza-claro);
+  border-bottom: 1px solid var(--cinza-claro);
+}
+
+.detalhe-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--cinza-texto);
+}
+
+.detalhe-icone { font-size: 16px; flex-shrink: 0; }
+
+/* Botões */
+.cachoeira-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-localizacao {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 20px;
+  background: var(--off-white);
+  color: var(--verde);
+  border: 1.5px solid var(--verde);
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background var(--transicao), color var(--transicao), transform var(--transicao);
+}
+
+.btn-localizacao:hover {
+  background: var(--verde);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-agendar {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 20px;
+  background: var(--laranja);
+  color: white;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background var(--transicao), transform var(--transicao), box-shadow var(--transicao);
+  box-shadow: 0 4px 14px rgba(224,123,0,0.3);
+}
+
+.btn-agendar:hover {
+  background: var(--laranja-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(224,123,0,0.4);
+}
+
+/* ── CTA FINAL ── */
+.cachoeiras-cta {
+  padding: 80px 0;
+  background: white;
+}
+
+.cta-box {
+  background: var(--verde-escuro);
+  border-radius: var(--radius-grande);
+  padding: 64px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-box::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  background: rgba(224,123,0,0.08);
+  border-radius: 50%;
+}
+
+.cta-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 3.5vw, 36px);
+  color: white;
+  margin-bottom: 14px;
+}
+
+.cta-box p {
+  color: rgba(255,255,255,0.7);
+  font-size: 15px;
+  max-width: 480px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 900px) {
+  .intro-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro-stat:nth-child(2) { border-right: none; }
+  .intro-stat:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.15); }
+  .intro-stat:nth-child(3),
+  .intro-stat:nth-child(4) {
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .cachoeira-card,
+  .cachoeira-card.invertido {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .cachoeira-foto { min-height: 260px; }
+  .cachoeira-info { padding: 32px 28px; }
+  .cachoeira-numero { font-size: 36px; }
+}
+
+@media (max-width: 600px) {
+  .cachoeiras-lista { padding: 48px 0; }
+  .cachoeira-info { padding: 24px 20px; }
+  .cachoeira-info h2 { font-size: 22px; }
+  .cachoeira-btns { flex-direction: column; }
+  .btn-localizacao, .btn-agendar { justify-content: center; }
+  .cta-box { padding: 40px 24px; }
+
+  .intro-grid { grid-template-columns: repeat(2, 1fr); }
+}

@@ -1,125 +1,277 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
-  <title>Portal Turístico - São Bento do Sapucaí</title>
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Turístico – São Bento do Sapucaí</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
 
+</head>
 <body>
 
-    <header>
-  <div class="header-container">
+  <div id="header-componente"></div>
 
-    <div class="logo">
-      <img src="logo.png" alt="Logo">
-    </div>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Fechar menu">✕</button>
+  <nav class="mobile-nav">
+    <a href="index.html#servicos" class="mobile-link">Serviços</a>
+    <a href="index.html#destinos" class="mobile-link">Destinos</a>
+    <a href="index.html#sobre" class="mobile-link">Sobre</a>
+    <a href="index.html#faq" class="mobile-link">Dúvidas</a>
+    <a href="index.html#contato" class="mobile-link mobile-link-cta">Fazer Orçamento</a>
+  </nav>
+</div>
+<div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <nav>
-      <a href="#">Serviços</a>
-      <a href="#">Caravan</a>
-      <a href="#">Lugares</a>
-      <a href="#">Contato</a>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Fechar menu">✕</button>
+    <nav class="mobile-nav">
+      <a href="#servicos" class="mobile-link">Serviços</a>
+      <a href="#destinos" class="mobile-link">Destinos</a>
+      <a href="#sobre" class="mobile-link">Sobre</a>
+      <a href="#faq" class="mobile-link">Dúvidas</a>
+      <a href="#contato" class="mobile-link mobile-link-cta">Fazer Orçamento</a>
     </nav>
-
   </div>
-</header>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div>
-      <h1>Explore São Bento do Sapucaí</h1>
-      <p>Roteiros personalizados com conforto e segurança</p>
-      <button class="btn">FAÇA UM ORÇAMENTO</button>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-badge">Serra da Mantiqueira</span>
+      <h1>Explore São Bento<br>do Sapucaí</h1>
+      <p>Roteiros personalizados, cachoeiras, trilhas e<br>a icônica Pedra do Baú — tudo num só lugar.</p>
+      <div class="hero-btns">
+        <a href="#contato" class="btn-primary">Fazer Orçamento</a>
+        <a href="#destinos" class="btn-ghost">Ver Destinos</a>
+      </div>
     </div>
-  </div>
-
-  <!-- SOBRE -->
-  <section>
-    <h2>Quem somos</h2>
-    <p>Somos apaixonados por São Bento do Sapucaí e queremos te proporcionar experiências únicas com roteiros personalizados.</p>
-  </section>
-
-  <!-- SERVIÇOS -->
-  <section>
-    <h2>Nossos Serviços</h2>
-    <div class="cards">
-      
-      <a href="">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
-        <h3>City Tour</h3>
-      </div>
-      </a>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-        <h3>Passeios Personalizados</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d">
-        <h3>Transfer</h3>
-      </div>
-
+    <div class="hero-scroll">
+      <span>Rolar</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- DESTINOS -->
-  <section>
-    <h2>Conheça os Destinos</h2>
-    <div class="cards">
-
-      <div class="card">
-        <img src="pedrabau.png">
-        <h3>Pedra do Baú</h3>
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-texto">
+          <span class="label">Quem somos</span>
+          <h2>Apaixonados por São Bento do Sapucaí</h2>
+          <p>Somos um portal turístico dedicado a conectar visitantes com tudo que a cidade tem de melhor — das cachoeiras cristalinas às trilhas da Pedra do Baú. Oferecemos roteiros personalizados, indicações de gastronomia local e contato direto com os melhores guias da região.</p>
+        </div>
+        <div class="sobre-numeros">
+          <div class="numero-card">
+            <strong>15+</strong>
+            <span>Destinos mapeados</span>
+          </div>
+          <div class="numero-card">
+            <strong>8+</strong>
+            <span>Guias parceiros</span>
+          </div>
+          <div class="numero-card">
+            <strong>100%</strong>
+            <span>Personalizado</span>
+          </div>
+        </div>
       </div>
-
-      <a href="cachoeiras.html">
-      <div class="card">
-        <img src="cachoeira.png">
-        <h3>Cachoeiras</h3>
-      </div>
-      </a>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-        <h3>Trilhas</h3>
-      </div>
-
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section>
-    <h2>Dúvidas Frequentes</h2>
-    <div class="faq">
-      <h4>Como reservar?</h4>
-      <p>Entre em contato via WhatsApp.</p>
+  <section class="servicos" id="servicos">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">O que oferecemos</span>
+        <h2>Nossos Serviços</h2>
+      </div>
+      <div class="servicos-grid">
+        <div class="servico-card">
+          <div class="servico-img">
+            <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=600&q=80" alt="City Tour">
+            <div class="servico-overlay"><span>Saiba mais →</span></div>
+          </div>
+          <div class="servico-info">
+            <h3>City Tour</h3>
+            <p>Conheça os principais pontos turísticos da cidade com guia especializado e transporte incluso.</p>
+          </div>
+        </div>
 
-      <h4>Posso personalizar o roteiro?</h4>
-      <p>Sim! Adaptamos conforme sua preferência.</p>
+        <div class="servico-card destaque">
+          <div class="servico-img">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&q=80" alt="Passeios Personalizados">
+            <div class="servico-overlay"><span>Saiba mais →</span></div>
+          </div>
+          <div class="servico-info">
+            <span class="tag-destaque">Mais popular</span>
+            <h3>Passeios Personalizados</h3>
+            <p>Monte seu roteiro ideal com base nos seus interesses, tempo disponível e nível de experiência.</p>
+          </div>
+        </div>
 
-      <h4>Precisa pagar antes?</h4>
-      <p>Sim, é necessário um sinal para garantir a reserva.</p>
+        <div class="servico-card">
+          <div class="servico-img">
+            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80" alt="Transfer">
+            <div class="servico-overlay"><span>Saiba mais →</span></div>
+          </div>
+          <div class="servico-info">
+            <h3>Transfer</h3>
+            <p>Chegue com conforto e segurança. Serviço de transfer a partir de São Paulo e região.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- CONTATO -->
-  <section>
-    <h2>Entre em contato</h2>
-    <form>
-      <input type="text" placeholder="Seu nome">
-      <input type="email" placeholder="Seu email">
-      <input type="text" placeholder="Seu telefone">
-      <textarea placeholder="Mensagem"></textarea>
-      <button class="btn">Enviar</button>
-    </form>
+  <section class="destinos" id="destinos">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Onde ir</span>
+        <h2>Conheça os Destinos</h2>
+      </div>
+      <div class="destinos-grid">
+        <div class="destino-card destino-grande">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80" alt="Pedra do Baú">
+          <div class="destino-info">
+            <span class="destino-tag">Trilha · Alta dificuldade</span>
+            <h3>Pedra do Baú</h3>
+            <p>O cartão postal de São Bento. Vista de 360° no topo da rocha mais famosa da Mantiqueira.</p>
+          </div>
+        </div>
+
+        <a href="cachoeiras.html" class="destino-card">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80" alt="Cachoeiras">
+          <div class="destino-info">
+            <span class="destino-tag">Natureza · Fácil acesso</span>
+            <h3>Cachoeiras</h3>
+            <p>Águas cristalinas e piscinas naturais escondidas na mata.</p>
+          </div>
+        </a>
+
+        <div class="destino-card">
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80" alt="Trilhas">
+          <div class="destino-info">
+            <span class="destino-tag">Aventura · Vários níveis</span>
+            <h3>Trilhas</h3>
+            <p>Rotas para todos os perfis, do iniciante ao experiente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2026 - Portal Turístico São Bento do Sapucaí</p>
-  </footer>
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Tire suas dúvidas</span>
+        <h2>Perguntas Frequentes</h2>
+      </div>
+      <div class="faq-lista">
+        <div class="faq-item">
+          <button class="faq-pergunta">
+            Como faço para reservar?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-resposta">
+            <p>Entre em contato via WhatsApp ou pelo formulário abaixo. Respondemos em até 24h com opções de roteiro e valores.</p>
+          </div>
+        </div>
 
+        <div class="faq-item">
+          <button class="faq-pergunta">
+            Posso personalizar o roteiro?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-resposta">
+            <p>Sim! Todos os nossos roteiros são adaptáveis. Nos conte seus interesses, tempo disponível e nível de condicionamento físico.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-pergunta">
+            Precisa pagar antecipado?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-resposta">
+            <p>É necessário um sinal para confirmar a reserva. O restante é pago no dia do passeio, em dinheiro ou PIX.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-pergunta">
+            Os passeios aceitam crianças?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-resposta">
+            <p>Depende do tipo de passeio. Trilhas leves e cachoeiras de fácil acesso são ideais para a família. Trilhas avançadas têm restrição de idade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contato" id="contato">
+    <div class="container">
+      <div class="contato-grid">
+        <div class="contato-texto">
+          <span class="label label-light">Fale conosco</span>
+          <h2>Pronto para sua aventura?</h2>
+          <p>Preencha o formulário e montamos o roteiro ideal para você. Atendimento rápido e personalizado.</p>
+          <div class="contato-infos">
+            <div class="contato-info-item">
+              <span class="info-icon">📍</span>
+              <span>São Bento do Sapucaí – SP</span>
+            </div>
+            <div class="contato-info-item">
+              <span class="info-icon">💬</span>
+              <span>Atendimento via WhatsApp</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contato-form-wrap">
+          <div class="form-card">
+            <div class="form-group">
+              <label>Seu nome</label>
+              <input type="text" placeholder="João Silva">
+            </div>
+            <div class="form-group">
+              <label>E-mail</label>
+              <input type="email" placeholder="joao@email.com">
+            </div>
+            <div class="form-group">
+              <label>WhatsApp</label>
+              <input type="tel" placeholder="(12) 99999-9999">
+            </div>
+            <div class="form-group">
+              <label>Interesse</label>
+              <select>
+                <option value="">Selecione um serviço</option>
+                <option>City Tour</option>
+                <option>Passeio Personalizado</option>
+                <option>Transfer</option>
+                <option>Pedra do Baú</option>
+                <option>Cachoeiras</option>
+                <option>Trilhas</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Mensagem</label>
+              <textarea placeholder="Conte mais sobre o que você procura..."></textarea>
+            </div>
+            <button class="btn-submit">Enviar Mensagem</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-componente"></div>
+
+  <script src="components.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

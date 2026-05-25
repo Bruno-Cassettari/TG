@@ -1,75 +1,343 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Cachoeiras - São Bento do Sapucaí</title>
-    <link rel="stylesheet" href="cachoeiras.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cachoeiras – São Bento do Sapucaí</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cachoeiras.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
 
 </head>
-
 <body>
 
-<header>
-    <div class="logo">
-        <img src="logo.png" alt="Logo">
+  <div id="header-componente"></div>
+
+  <!-- HERO DA PÁGINA -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-content">
+      <span class="hero-badge">Natureza · São Bento do Sapucaí</span>
+      <h1>Cachoeiras</h1>
+      <p>Águas cristalinas, piscinas naturais e trilhas entre a mata fechada da Mantiqueira.</p>
     </div>
+  </section>
 
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="caravana.html">Caravana</a>
-        <a href="lugares.html">Lugares</a>
-        <a href="contato.html">Contato</a>
-    </nav>
-</header>
-
-<div class="container">
-
-    <div class="cachoeira-box">
-        <div class="card-grande">
-            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
-            <h3>Cachoeira do Toldi</h3>
+  <!-- INTRO -->
+  <section class="cachoeiras-intro">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-stat">
+          <strong>7</strong>
+          <span>Cachoeiras mapeadas</span>
         </div>
-
-        <div class="info">
-            <h2>Sobre a Cachoeira</h2>
-            <p>
-                A Cachoeira do Toldi é uma das mais conhecidas de São Bento do Sapucaí,
-                com águas cristalinas e fácil acesso. Ideal para quem busca relaxar
-                e aproveitar a natureza.
-            </p>
-
-            <h3>Localização</h3>
-            <iframe src="https://www.google.com/maps?q=São%20Bento%20do%20Sapucaí&output=embed"></iframe>
+        <div class="intro-stat">
+          <strong>Todo ano</strong>
+          <span>Visitáveis</span>
         </div>
+        <div class="intro-stat">
+          <strong>Fácil a moderado</strong>
+          <span>Nível de acesso</span>
+        </div>
+        <div class="intro-stat">
+          <strong>Guia</strong>
+          <span>Recomendado</span>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="cachoeira-box">
-        <div class="card-grande">
-            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7">
-            <h3>Cachoeira dos Amores</h3>
+  <!-- LISTAGEM DE CACHOEIRAS -->
+  <section class="cachoeiras-lista">
+    <div class="container">
+
+      <!-- CARD 1 -->
+      <div class="cachoeira-card">
+        <div class="cachoeira-foto">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=700&q=80" alt="Cachoeira do Mojolinha">
+          <span class="cachoeira-badge">Destaque</span>
         </div>
-
-        <div class="info">
-            <h2>Sobre a Cachoeira</h2>
-            <p>
-                A Cachoeira dos Amores possui um ambiente mais reservado,
-                perfeita para casais e visitantes que procuram tranquilidade.
-                Sua queda d’água forma uma bela piscina natural.
-            </p>
-
-            <h3>Localização</h3>
-            <iframe src="https://www.google.com/maps?q=São%20Bento%20do%20Sapucaí&output=embed"></iframe>
+        <div class="cachoeira-info">
+          <div class="cachoeira-topo">
+            <span class="cachoeira-numero">01</span>
+            <div class="cachoeira-tags">
+              <span class="tag">🥾 Trilha fácil</span>
+              <span class="tag">🏊 Piscina natural</span>
+            </div>
+          </div>
+          <h2>Cachoeira do Mojolinha</h2>
+          <p>Uma das mais procuradas da região, a Cachoeira do Mojolinha encanta pela queda d'água de aproximadamente 12 metros que deságua numa piscina natural de águas frias e transparentes. O acesso é feito por uma trilha leve de cerca de 20 minutos, ideal para famílias e iniciantes.</p>
+          <div class="cachoeira-detalhes">
+            <div class="detalhe-item">
+              <span class="detalhe-icone">📍</span>
+              <span>Estrada do Mojolinha, zona rural</span>
+            </div>
+            <div class="detalhe-item">
+              <span class="detalhe-icone">⏱️</span>
+              <span>20 min de trilha</span>
+            </div>
+            <div class="detalhe-item">
+              <span class="detalhe-icone">🌡️</span>
+              <span>Visitável o ano todo</span>
+            </div>
+          </div>
+          <div class="cachoeira-btns">
+            <a href="https://www.google.com/maps/search/Cachoeira+do+Mojolinha+São+Bento+do+Sapucaí" target="_blank" class="btn-localizacao">
+              📍 Ver no Mapa
+            </a>
+            <a href="index.html#contato" class="btn-agendar">Agendar Passeio</a>
+          </div>
         </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="cachoeira-card invertido">
+        <div class="cachoeira-foto">
+          <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=700&q=80" alt="Cachoeira dos Amores">
+        </div>
+        <div class="cachoeira-info">
+          <div class="cachoeira-topo">
+            <span class="cachoeira-numero">02</span>
+            <div class="cachoeira-tags">
+              <span class="tag">💑 Romântico</span>
+              <span class="tag">🌿 Reservado</span>
+            </div>
+          </div>
+          <h2>Cachoeira dos Amores</h2>
+          <p>Com um ambiente mais reservado e tranquilo, a Cachoeira dos Amores é perfeita para casais que buscam um refúgio na natureza. A queda forma uma bela piscina natural cercada por vegetação nativa, criando uma atmosfera única e intimista.</p>
+          <div class="cachoeira-detalhes">
+            <div class="detalhe-item">
+              <span class="detalhe-icone">📍</span>
+              <span>Região do Vale dos Amores</span>
+            </div>
+            <div class="detalhe-item">
+              <span class="detalhe-icone">⏱️</span>
+              <span>35 min de trilha</span>
+            </div>
+            <div class="detalhe-item">
+              <span class="detalhe-icone">⚠️</span>
+              <span>Evitar no período chuvoso</span>
+            </div>
+          </div>
+          <div class="cachoeira-btns">
+            <a href="https://www.google.com/maps/search/Cachoeira+dos+Amores+São+Bento+do+Sapucaí" target="_blank" class="btn-localizacao">
+              📍 Ver no Mapa
+            </a>
+            <a href="index.html#contato" class="btn-agendar">Agendar Passeio</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="cachoeira-card">
+        <div class="cachoeira-foto">
+          <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=700&q=80" alt="Cachoeira do Toldi">
+        </div>
+        <div class="cachoeira-info">
+          <div class="cachoeira-topo">
+            <span class="cachoeira-numero">03</span>
+            <div class="cachoeira-tags">
+              <span class="tag">⭐ Mais conhecida</span>
+              <span class="tag">🚗 Fácil acesso</span>
+            </div>
+          </div>
+          <h2>Cachoeira do Toldi</h2>
+          <p>Considerada uma das mais conhecidas de São Bento do Sapucaí, a Cachoeira do Toldi possui fácil acesso e estrutura para receber visitantes. Suas águas cristalinas e a queda imponente fazem dela um ponto de parada obrigatória para quem visita a cidade pela primeira vez.</p>
+          <div class="cachoeira-detalhes">
+            <div class="detalhe-item">
+              <span class="detalhe-icone">📍</span>
+              <span>Sítio do Toldi, acesso pela SP-50</span>
+            </div>
+            <div class="detalhe-item">
+              <span class="detalhe-icone">⏱️</span>
+              <span>10 min de trilha</span>
+            </div>
+            <div class="detalhe-item">
+              <span class="detalhe-icone">👨‍👩‍👧</span>
+              <span>Ideal para famílias</span>
+            </div>
+          </div>
+          <div class="cachoeira-btns">
+            <a href="https://www.google.com/maps/search/Cachoeira+do+Toldi+São+Bento+do+Sapucaí" target="_blank" class="btn-localizacao">
+              📍 Ver no Mapa
+            </a>
+            <a href="index.html#contato" class="btn-agendar">Agendar Passeio</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="cachoeira-card invertido">
+        <div class="cachoeira-foto">
+          <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=700&q=80" alt="Cachoeira do Poção">
+        </div>
+        <div class="cachoeira-info">
+          <div class="cachoeira-topo">
+            <span class="cachoeira-numero">04</span>
+            <div class="cachoeira-tags">
+              <span class="tag">🏊 Poço profundo</span>
+              <span class="tag">🧗 Moderado</span>
+            </div>
+          </div>
+          <h2>Cachoeira do Poção</h2>
+          <p>O nome não mente — a Cachoeira do Poção forma um dos maiores e mais profundos poços naturais da região, ideal para quem gosta de mergulho em águas frias. A trilha de acesso tem nível moderado e passa por trechos de mata fechada com rica biodiversidade.</p>
+          <div class="cachoeira-detalhes">
+            <div class="detalhe-item">
+              <span class="detalhe-icone">📍</span>
+              <span>Zona rural, região do Poção</span>
+            </div>
+            <div class="detalhe-item">
+              <span class="detalhe-icone">⏱️</span>
+              <span>45 min de trilha</span>
+            </div>
+            <div class="detalhe-item">
+              <span class="detalhe-icone">⚠️</span>
+              <span>Guia recomendado</span>
+            </div>
+          </div>
+          <div class="cachoeira-btns">
+            <a href="https://www.google.com/maps/search/Cachoeira+do+Poção+São+Bento+do+Sapucaí" target="_blank" class="btn-localizacao">
+              📍 Ver no Mapa
+            </a>
+            <a href="index.html#contato" class="btn-agendar">Agendar Passeio</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="cachoeira-card">
+        <div class="cachoeira-foto">
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=700&q=80" alt="Cachoeira da Serrinha">
+        </div>
+        <div class="cachoeira-info">
+          <div class="cachoeira-topo">
+            <span class="cachoeira-numero">05</span>
+            <div class="cachoeira-tags">
+              <span class="tag">🌄 Vista panorâmica</span>
+              <span class="tag">🥾 Trilha longa</span>
+            </div>
+          </div>
+          <h2>Cachoeira da Serrinha</h2>
+          <p>Localizada em altitude mais elevada, a Cachoeira da Serrinha oferece uma trilha com vistas panorâmicas da Serra da Mantiqueira antes de chegar à queda. A recompensa pela caminhada é uma cascata de múltiplos saltos emoldurada por pedras cobertas de musgo.</p>
+          <div class="cachoeira-detalhes">
+            <div class="detalhe-item">
+              <span class="detalhe-icone">📍</span>
+              <span>Estrada da Serrinha, zona alta</span>
+            </div>
+            <div class="detalhe-item">
+              <span class="detalhe-icone">⏱️</span>
+              <span>1h de trilha</span>
+            </div>
+            <div class="detalhe-item">
+              <span class="detalhe-icone">🌤️</span>
+              <span>Melhor nos meses secos</span>
+            </div>
+          </div>
+          <div class="cachoeira-btns">
+            <a href="https://www.google.com/maps/search/Cachoeira+da+Serrinha+São+Bento+do+Sapucaí" target="_blank" class="btn-localizacao">
+              📍 Ver no Mapa
+            </a>
+            <a href="index.html#contato" class="btn-agendar">Agendar Passeio</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="cachoeira-card invertido">
+        <div class="cachoeira-foto">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80" alt="Cachoeira do Véu de Noiva">
+        </div>
+        <div class="cachoeira-info">
+          <div class="cachoeira-topo">
+            <span class="cachoeira-numero">06</span>
+            <div class="cachoeira-tags">
+              <span class="tag">📸 Fotogênica</span>
+              <span class="tag">🌿 Mata preservada</span>
+            </div>
+          </div>
+          <h2>Cachoeira do Véu de Noiva</h2>
+          <p>Com uma queda fina e alongada que lembra um véu, esta cachoeira é um dos pontos mais fotografados da região. Está inserida em área de mata atlântica bem preservada, onde é comum avistar aves nativas durante a trilha de acesso.</p>
+          <div class="cachoeira-detalhes">
+            <div class="detalhe-item">
+              <span class="detalhe-icone">📍</span>
+              <span>Propriedade particular, acesso autorizado</span>
+            </div>
+            <div class="detalhe-item">
+              <span class="detalhe-icone">⏱️</span>
+              <span>25 min de trilha</span>
+            </div>
+            <div class="detalhe-item">
+              <span class="detalhe-icone">📋</span>
+              <span>Agendamento necessário</span>
+            </div>
+          </div>
+          <div class="cachoeira-btns">
+            <a href="https://www.google.com/maps/search/Cachoeira+Véu+de+Noiva+São+Bento+do+Sapucaí" target="_blank" class="btn-localizacao">
+              📍 Ver no Mapa
+            </a>
+            <a href="index.html#contato" class="btn-agendar">Agendar Passeio</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="cachoeira-card">
+        <div class="cachoeira-foto">
+          <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=700&q=80" alt="Cachoeira do Escorrega">
+        </div>
+        <div class="cachoeira-info">
+          <div class="cachoeira-topo">
+            <span class="cachoeira-numero">07</span>
+            <div class="cachoeira-tags">
+              <span class="tag">🎢 Escorregador natural</span>
+              <span class="tag">👦 Para crianças</span>
+            </div>
+          </div>
+          <h2>Cachoeira do Escorrega</h2>
+          <p>A favorita das crianças! A Cachoeira do Escorrega tem uma formação rochosa inclinada que funciona como um escorregador natural de pedra, muito apreciado por visitantes de todas as idades. O ambiente descontraído e o fácil acesso tornam este ponto ideal para um dia em família.</p>
+          <div class="cachoeira-detalhes">
+            <div class="detalhe-item">
+              <span class="detalhe-icone">📍</span>
+              <span>Área de lazer municipal</span>
+            </div>
+            <div class="detalhe-item">
+              <span class="detalhe-icone">⏱️</span>
+              <span>5 min de caminhada</span>
+            </div>
+            <div class="detalhe-item">
+              <span class="detalhe-icone">👨‍👩‍👧</span>
+              <span>Perfeito para famílias</span>
+            </div>
+          </div>
+          <div class="cachoeira-btns">
+            <a href="https://www.google.com/maps/search/Cachoeira+do+Escorrega+São+Bento+do+Sapucaí" target="_blank" class="btn-localizacao">
+              📍 Ver no Mapa
+            </a>
+            <a href="index.html#contato" class="btn-agendar">Agendar Passeio</a>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-</div>
+  <!-- CTA FINAL -->
+  <section class="cachoeiras-cta">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Quer visitar alguma dessas cachoeiras?</h2>
+        <p>Montamos roteiros personalizados com transporte, guia e todas as dicas para você aproveitar ao máximo.</p>
+        <a href="index.html#contato" class="btn-primary">Fazer Orçamento</a>
+      </div>
+    </div>
+  </section>
 
-<footer>
-    <p>© 2026 - Portal Turístico São Bento do Sapucaí</p>
-</footer>
+  <div id="footer-componente"></div>
 
+  <script src="components.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-```
