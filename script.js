@@ -58,3 +58,32 @@ const aguardarHeader = setInterval(() => {
     iniciarHeader();
   }
 }, 50);
+
+
+function enviarMensagemWhatsApp() {
+  const nome = document.getElementById('nome').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const whatsapp = document.getElementById('whatsapp').value.trim();
+  const interesse = document.getElementById('interesse').value;
+  const mensagem = document.getElementById('mensagem').value.trim();
+
+  // validação básica
+  if (!nome || !whatsapp) {
+    alert('Por favor, preencha pelo menos nome e WhatsApp.');
+    return;
+  }
+
+  // monta o texto da mensagem
+  let texto = `Olá! Meu nome é ${nome}.\n`;
+  if (email) texto += `E-mail: ${email}\n`;
+  texto += `WhatsApp: ${whatsapp}\n`;
+  if (interesse) texto += `Interesse: ${interesse}\n`;
+  if (mensagem) texto += `Mensagem: ${mensagem}`;
+
+  // número do WhatsApp da empresa (troque pelo número real, com DDI+DDD)
+  const numeroWhatsApp = '5512997171694';
+
+  const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+
+  window.open(url, '_blank');
+}

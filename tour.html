@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passeios Prontos – São Bento do Sapucaí</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="tour.css">
+</head>
+<body>
+
+  <div id="header-componente"></div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Fechar menu">✕</button>
+    <nav class="mobile-nav">
+      <a href="index.html#servicos" class="mobile-link">Serviços</a>
+      <a href="index.html#destinos" class="mobile-link">Destinos</a>
+      <a href="passeios.html" class="mobile-link">Passeios Prontos</a>
+      <a href="index.html#sobre" class="mobile-link">Sobre</a>
+      <a href="index.html#faq" class="mobile-link">Dúvidas</a>
+      <a href="index.html#contato" class="mobile-link mobile-link-cta">Fazer Orçamento</a>
+    </nav>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- ── HERO ── -->
+  <section class="passeios-hero">
+    <div class="passeios-hero-bg"></div>
+    <div class="passeios-hero-content">
+      <span class="hero-badge">Roteiros prontos</span>
+      <h1>Passeios Prontos</h1>
+      <p>Três circuitos montados pela nossa equipe, prontos para reservar. Escolha o roteiro que mais combina com o seu preparo físico e o tempo que você tem disponível.</p>
+    </div>
+  </section>
+
+  <!-- ── LEGENDA RÁPIDA ── -->
+  <section class="passeios-legenda">
+    <div class="container">
+      <div class="legenda-grid">
+        <div class="legenda-item">
+          <span class="legenda-icon">⛰️</span>
+          <div>
+            <strong>Dificuldade</strong>
+            <span>Nível de esforço físico exigido em cada roteiro</span>
+          </div>
+        </div>
+        <div class="legenda-item">
+          <span class="legenda-icon">⏱️</span>
+          <div>
+            <strong>Duração</strong>
+            <span>Tempo total do passeio, do início ao fim</span>
+          </div>
+        </div>
+        <div class="legenda-item">
+          <span class="legenda-icon">🚐</span>
+          <div>
+            <strong>Transporte</strong>
+            <span>Indicamos se o transporte já está incluso no valor</span>
+          </div>
+        </div>
+        <div class="legenda-item">
+          <span class="legenda-icon">👥</span>
+          <div>
+            <strong>Grupo</strong>
+            <span>Tamanho ideal de grupo para cada experiência</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LISTA DE PASSEIOS ── -->
+  <section class="passeios-lista" id="passeios">
+    <div class="container">
+
+      <!-- PASSEIO 1 -->
+      <article class="passeio-card">
+        <div class="passeio-img">
+          <img src="capapedra.jpeg" alt="Circuito Pedra do Baú">
+          <span class="passeio-numero">01</span>
+        </div>
+        <div class="passeio-conteudo">
+          <span class="passeio-dificuldade dificuldade-alta">Alta dificuldade</span>
+          <h2>Circuito Pedra do Baú Completo</h2>
+          <p class="passeio-desc">O roteiro mais desafiador e mais procurado da região. Subida técnica com auxílio de cabos de aço até o topo da Pedra do Baú, com vista de 360° da Serra da Mantiqueira.</p>
+
+          <div class="passeio-specs">
+            <div class="spec"><span class="spec-icon">⏱️</span> Dia inteiro (8h)</div>
+            <div class="spec"><span class="spec-icon">🚐</span> Transporte incluso</div>
+            <div class="spec"><span class="spec-icon">👥</span> Grupos de até 8 pessoas</div>
+            <div class="spec"><span class="spec-icon">🎂</span> A partir de 14 anos</div>
+          </div>
+
+          <div class="passeio-roteiro">
+            <strong>Por onde passa</strong>
+            <ol>
+              <li>Saída da vila às 6h com transporte 4x4</li>
+              <li>Trilha de acesso pela mata até a base da rocha</li>
+              <li>Subida com cabos de aço até o Baú Pequeno</li>
+              <li>Travessia até o Baú Grande (ponto mais alto)</li>
+              <li>Piquenique no topo com vista panorâmica</li>
+              <li>Descida e retorno à vila no fim da tarde</li>
+            </ol>
+          </div>
+
+          <div class="passeio-incluso">
+            <strong>O que está incluso</strong>
+            <ul>
+              <li>Transporte 4x4 ida e volta</li>
+              <li>Guia especializado e equipamento de segurança</li>
+              <li>Seguro de acidentes pessoais</li>
+              <li>Lanche de trilha</li>
+            </ul>
+          </div>
+
+          <a href="index.html#contato" class="btn-primary">Fazer Orçamento</a>
+        </div>
+      </article>
+
+      <!-- PASSEIO 2 -->
+      <article class="passeio-card passeio-invertido">
+        <div class="passeio-img">
+          <img src="capacachu.jpeg" alt="Circuito Cachoeiras & Natureza">
+          <span class="passeio-numero">02</span>
+        </div>
+        <div class="passeio-conteudo">
+          <span class="passeio-dificuldade dificuldade-facil">Fácil · Ideal para famílias</span>
+          <h2>Circuito Cachoeiras &amp; Natureza</h2>
+          <p class="passeio-desc">Um roteiro leve e refrescante entre três cachoeiras de fácil acesso, com trechos curtos de caminhada e tempo livre para banho nas piscinas naturais.</p>
+
+          <div class="passeio-specs">
+            <div class="spec"><span class="spec-icon">⏱️</span> Meio período (4h)</div>
+            <div class="spec"><span class="spec-icon">🚐</span> Transporte incluso</div>
+            <div class="spec"><span class="spec-icon">👥</span> Grupos de até 12 pessoas</div>
+            <div class="spec"><span class="spec-icon">🎂</span> Livre, todas as idades</div>
+          </div>
+
+          <div class="passeio-roteiro">
+            <strong>Por onde passa</strong>
+            <ol>
+              <li>Saída da vila às 9h</li>
+              <li>Cachoeira do Corujão, com poço para banho</li>
+              <li>Caminhada leve até a Cachoeira Véu de Noiva</li>
+              <li>Parada para almoço em restaurante parceiro (opcional)</li>
+              <li>Cachoeira do Papudinho para encerrar o passeio</li>
+              <li>Retorno à vila no início da tarde</li>
+            </ol>
+          </div>
+
+          <div class="passeio-incluso">
+            <strong>O que está incluso</strong>
+            <ul>
+              <li>Transporte ida e volta</li>
+              <li>Guia local</li>
+              <li>Seguro de acidentes pessoais</li>
+              <li>Água durante o passeio</li>
+            </ul>
+          </div>
+
+          <a href="index.html#contato" class="btn-primary">Fazer Orçamento</a>
+        </div>
+      </article>
+
+      <!-- PASSEIO 3 -->
+      <article class="passeio-card">
+        <div class="passeio-img">
+          <img src="cultura.webp" alt="Circuito Cultural & Mirantes">
+          <span class="passeio-numero">03</span>
+        </div>
+        <div class="passeio-conteudo">
+          <span class="passeio-dificuldade dificuldade-moderada">Moderada</span>
+          <h2>Circuito Cultural &amp; Mirantes</h2>
+          <p class="passeio-desc">Passeio sem trilhas pesadas, pensado para quem quer conhecer a história, a gastronomia local e os mirantes mais bonitos da cidade com calma.</p>
+
+          <div class="passeio-specs">
+            <div class="spec"><span class="spec-icon">⏱️</span> Dia inteiro (6h)</div>
+            <div class="spec"><span class="spec-icon">🚐</span> Transporte incluso</div>
+            <div class="spec"><span class="spec-icon">👥</span> Grupos de até 15 pessoas</div>
+            <div class="spec"><span class="spec-icon">🎂</span> Livre, todas as idades</div>
+          </div>
+
+          <div class="passeio-roteiro">
+            <strong>Por onde passa</strong>
+            <ol>
+              <li>Saída da vila às 9h30</li>
+              <li>Visita ao centro histórico e igreja matriz</li>
+              <li>Parada em produtores locais (queijos e doces)</li>
+              <li>Mirante do Cruzeiro, com vista da Serra</li>
+              <li>Almoço em restaurante típico da região</li>
+              <li>Mirante da Pedra Redonda ao entardecer</li>
+            </ol>
+          </div>
+
+          <div class="passeio-incluso">
+            <strong>O que está incluso</strong>
+            <ul>
+              <li>Transporte ida e volta</li>
+              <li>Guia local</li>
+              <li>Degustação em produtores parceiros</li>
+              <li>Seguro de acidentes pessoais</li>
+            </ul>
+          </div>
+
+          <a href="index.html#contato" class="btn-primary">Fazer Orçamento</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ── CTA FINAL ── -->
+  <section class="passeios-cta">
+    <div class="container passeios-cta-inner">
+      <div>
+        <h2>Nenhum roteiro combinou 100%?</h2>
+        <p>Também montamos passeios sob medida, misturando trilhas, cachoeiras e pontos culturais do jeito que você quiser.</p>
+      </div>
+      <a href="index.html#contato" class="btn-primary">Montar Roteiro Personalizado</a>
+    </div>
+  </section>
+
+  <div id="footer-componente"></div>
+
+  <script src="components.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+/* ────────────────────────────────────────────
+   PASSEIOS.CSS
+   Usa as variáveis de cor/tipografia definidas em style.css
+   (--verde, --verde-escuro, --laranja, --off-white, --sombra, etc.)
+──────────────────────────────────────────────── */
+
+/* ── HERO DA PÁGINA ── */
+.passeios-hero {
+  position: relative;
+  min-height: 46vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 140px 24px 64px;
+}
+
+.passeios-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(0,30,0,0.65) 0%, rgba(0,20,0,0.45) 55%, rgba(247,245,240,1) 100%),
+    url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=1600&q=85') center/cover no-repeat;
+}
+
+.passeios-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+}
+
+.passeios-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 5.5vw, 56px);
+  font-weight: 900;
+  color: white;
+  line-height: 1.15;
+  margin: 8px 0 18px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+.passeios-hero-content p {
+  color: rgba(255,255,255,0.9);
+  font-size: clamp(15px, 2vw, 17px);
+  line-height: 1.7;
+}
+
+/* ── LEGENDA RÁPIDA ── */
+.passeios-legenda {
+  background: var(--off-white);
+  padding: 0 0 72px;
+}
+
+.legenda-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.legenda-item {
+  background: white;
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: var(--sombra);
+}
+
+.legenda-icon {
+  font-size: 22px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.legenda-item strong {
+  display: block;
+  font-size: 14px;
+  color: var(--preto);
+  margin-bottom: 4px;
+}
+
+.legenda-item span {
+  font-size: 12.5px;
+  color: var(--cinza-texto);
+  line-height: 1.5;
+}
+
+/* ── LISTA DE PASSEIOS ── */
+.passeios-lista {
+  background: white;
+  padding: 20px 0 100px;
+}
+
+.passeio-card {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: 56px;
+  align-items: center;
+  padding: 64px 0;
+  border-bottom: 1px solid var(--cinza-claro);
+}
+
+.passeio-card:last-child { border-bottom: none; }
+
+.passeio-card.passeio-invertido .passeio-img { order: 2; }
+.passeio-card.passeio-invertido .passeio-conteudo { order: 1; }
+
+.passeio-img {
+  position: relative;
+  border-radius: var(--radius-grande);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.passeio-img img {
+  height: 420px;
+  transition: transform 0.5s ease;
+}
+
+.passeio-card:hover .passeio-img img { transform: scale(1.04); }
+
+.passeio-numero {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  background: rgba(0, 78, 0, 0.85);
+  padding: 6px 14px;
+  border-radius: 100px;
+  letter-spacing: 1px;
+}
+
+.passeio-conteudo h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 3vw, 32px);
+  color: var(--preto);
+  line-height: 1.2;
+  margin: 10px 0 14px;
+}
+
+.passeio-desc {
+  color: var(--cinza-texto);
+  font-size: 15px;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.passeio-dificuldade {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+}
+
+.dificuldade-facil     { background: #E4F3E4; color: var(--verde); }
+.dificuldade-moderada  { background: #FDECD2; color: var(--laranja-hover); }
+.dificuldade-alta      { background: #FBE0DC; color: #B23B24; }
+
+/* specs em grid de ícones */
+.passeio-specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 20px;
+  margin-bottom: 28px;
+}
+
+.spec {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--preto);
+}
+
+.spec-icon { font-size: 16px; }
+
+/* roteiro e incluso */
+.passeio-roteiro,
+.passeio-incluso {
+  margin-bottom: 24px;
+}
+
+.passeio-roteiro strong,
+.passeio-incluso strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--verde);
+  margin-bottom: 10px;
+}
+
+.passeio-roteiro ol {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.passeio-roteiro ol li {
+  font-size: 14px;
+  color: var(--cinza-texto);
+  line-height: 1.6;
+  padding-left: 4px;
+}
+
+.passeio-roteiro ol li::marker {
+  color: var(--laranja);
+  font-weight: 700;
+}
+
+.passeio-incluso ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.passeio-incluso ul li {
+  font-size: 14px;
+  color: var(--cinza-texto);
+  line-height: 1.5;
+  padding-left: 24px;
+  position: relative;
+}
+
+.passeio-incluso ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--verde);
+  font-weight: 700;
+}
+
+/* ── CTA FINAL ── */
+.passeios-cta {
+  background: var(--verde-escuro);
+  padding: 72px 0;
+}
+
+.passeios-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.passeios-cta-inner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 3vw, 30px);
+  color: white;
+  margin-bottom: 8px;
+}
+
+.passeios-cta-inner p {
+  color: rgba(255,255,255,0.7);
+  font-size: 14.5px;
+  max-width: 440px;
+  line-height: 1.6;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 900px) {
+  .legenda-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .passeio-card,
+  .passeio-card.passeio-invertido {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 48px 0;
+  }
+
+  .passeio-card.passeio-invertido .passeio-img,
+  .passeio-card.passeio-invertido .passeio-conteudo {
+    order: initial;
+  }
+
+  .passeio-img img { height: 300px; }
+
+  .passeios-cta-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .passeios-hero { padding: 120px 20px 48px; }
+  .legenda-grid { grid-template-columns: 1fr; }
+  .passeio-specs { grid-template-columns: 1fr; }
+}

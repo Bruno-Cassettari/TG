@@ -15,28 +15,6 @@
 
   <div id="header-componente"></div>
 
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="mobileClose" aria-label="Fechar menu">✕</button>
-  <nav class="mobile-nav">
-    <a href="index.html#servicos" class="mobile-link">Serviços</a>
-    <a href="index.html#destinos" class="mobile-link">Destinos</a>
-    <a href="index.html#sobre" class="mobile-link">Sobre</a>
-    <a href="index.html#faq" class="mobile-link">Dúvidas</a>
-    <a href="index.html#contato" class="mobile-link mobile-link-cta">Fazer Orçamento</a>
-  </nav>
-</div>
-<div class="mobile-overlay" id="mobileOverlay"></div>
-
-  <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-close" id="mobileClose" aria-label="Fechar menu">✕</button>
-    <nav class="mobile-nav">
-      <a href="#servicos" class="mobile-link">Serviços</a>
-      <a href="#destinos" class="mobile-link">Destinos</a>
-      <a href="#sobre" class="mobile-link">Sobre</a>
-      <a href="#faq" class="mobile-link">Dúvidas</a>
-      <a href="#contato" class="mobile-link mobile-link-cta">Fazer Orçamento</a>
-    </nav>
-  </div>
   <div class="mobile-overlay" id="mobileOverlay"></div>
 
   <section class="hero">
@@ -89,6 +67,8 @@
         <h2>Nossos Serviços</h2>
       </div>
       <div class="servicos-grid">
+
+       <a href="tour.html"> 
         <div class="servico-card">
           <div class="servico-img">
             <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=600&q=80" alt="City Tour">
@@ -99,7 +79,9 @@
             <p>Conheça os principais pontos turísticos da cidade com guia especializado e transporte incluso.</p>
           </div>
         </div>
+       </a> 
 
+       <a href="personalizado.html">
         <div class="servico-card destaque">
           <div class="servico-img">
             <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&q=80" alt="Passeios Personalizados">
@@ -111,6 +93,7 @@
             <p>Monte seu roteiro ideal com base nos seus interesses, tempo disponível e nível de experiência.</p>
           </div>
         </div>
+       </a> 
 
         <div class="servico-card">
           <div class="servico-img">
@@ -133,17 +116,20 @@
         <h2>Conheça os Destinos</h2>
       </div>
       <div class="destinos-grid">
-        <div class="destino-card destino-grande">
-          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80" alt="Pedra do Baú">
+
+      <div class="destino-card destino-grande">  
+       <a href="trilhapedra.html"> 
+          <img src="capapedra.jpeg" alt="Pedra do Baú">
           <div class="destino-info">
             <span class="destino-tag">Trilha · Alta dificuldade</span>
             <h3>Pedra do Baú</h3>
             <p>O cartão postal de São Bento. Vista de 360° no topo da rocha mais famosa da Mantiqueira.</p>
           </div>
-        </div>
-
+        </a>
+      </div>  
+        
         <a href="cachoeiras.html" class="destino-card">
-          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80" alt="Cachoeiras">
+          <img src="capacachu.jpeg" alt="Cachoeiras">
           <div class="destino-info">
             <span class="destino-tag">Natureza · Fácil acesso</span>
             <h3>Cachoeiras</h3>
@@ -152,11 +138,11 @@
         </a>
 
         <div class="destino-card">
-          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80" alt="Trilhas">
+          <img src="cultura.webp" alt="Trilhas">
           <div class="destino-info">
-            <span class="destino-tag">Aventura · Vários níveis</span>
-            <h3>Trilhas</h3>
-            <p>Rotas para todos os perfis, do iniciante ao experiente.</p>
+            <span class="destino-tag">Gastronomia • Cultura • Mirantes</span>
+            <h3>Onde ir</h3>
+            <p>Descubra sabores, lugares especiais e outros encantos de São Bento do Sapucaí.</p>
           </div>
         </div>
       </div>
@@ -234,36 +220,36 @@
 
         <div class="contato-form-wrap">
           <div class="form-card">
-            <div class="form-group">
-              <label>Seu nome</label>
-              <input type="text" placeholder="João Silva">
-            </div>
-            <div class="form-group">
-              <label>E-mail</label>
-              <input type="email" placeholder="joao@email.com">
-            </div>
-            <div class="form-group">
-              <label>WhatsApp</label>
-              <input type="tel" placeholder="(12) 99999-9999">
-            </div>
-            <div class="form-group">
-              <label>Interesse</label>
-              <select>
-                <option value="">Selecione um serviço</option>
-                <option>City Tour</option>
-                <option>Passeio Personalizado</option>
-                <option>Transfer</option>
-                <option>Pedra do Baú</option>
-                <option>Cachoeiras</option>
-                <option>Trilhas</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Mensagem</label>
-              <textarea placeholder="Conte mais sobre o que você procura..."></textarea>
-            </div>
-            <button class="btn-submit">Enviar Mensagem</button>
+                <div class="form-group">
+            <label>Seu nome</label>
+            <input type="text" id="nome" placeholder="João Silva">
           </div>
+          <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" id="email" placeholder="joao@email.com">
+          </div>
+          <div class="form-group">
+            <label>WhatsApp</label>
+            <input type="tel" id="whatsapp" placeholder="(12) 99999-9999">
+          </div>
+          <div class="form-group">
+            <label>Interesse</label>
+            <select id="interesse">
+              <option value="">Selecione um serviço</option>
+              <option>City Tour</option>
+              <option>Passeio Personalizado</option>
+              <option>Transfer</option>
+              <option>Pedra do Baú</option>
+              <option>Cachoeiras</option>
+              <option>Trilhas</option>
+              </select>
+              </div>
+          <div class="form-group">
+            <label>Mensagem</label>
+            <textarea id="mensagem" placeholder="Conte mais sobre o que você procura..."></textarea>
+            </div>
+            <button type="button" class="btn-submit" onclick="enviarMensagemWhatsApp()">Enviar Mensagem</button>
+        </div>
         </div>
       </div>
     </div>
