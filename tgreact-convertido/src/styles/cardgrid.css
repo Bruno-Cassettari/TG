@@ -1,4 +1,17 @@
-/* ── HERO DA PÁGINA ── */
+/* ════════════════════════════════════════════════════════
+   CARDGRID.CSS
+   Estrutura visual compartilhada pelas páginas que usam o
+   padrão de "hero + intro stats + cards alternados": usada
+   por Cachoeiras e Pedra do Baú (PedraDoBau.jsx).
+
+   Cada página define apenas a própria imagem de fundo do
+   hero, com uma classe extra combinada com .page-hero-bg
+   (ex.: "page-hero-bg cachoeiras-hero-bg" ou
+   "page-hero-bg pedra-hero-bg"), evitando que as duas
+   páginas briguem pela mesma regra de background.
+   ════════════════════════════════════════════════════════ */
+
+/* ── HERO DA PÁGINA (estrutura, sem imagem de fundo) ── */
 .page-hero {
   position: relative;
   height: 55vh;
@@ -13,9 +26,6 @@
 .page-hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(to bottom, rgba(0,25,0,0.6) 0%, rgba(0,40,0,0.5) 100%),
-    url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1400&q=85') center/cover no-repeat;
 }
 
 .page-hero-content {
@@ -87,7 +97,7 @@
   background: var(--off-white);
 }
 
-/* ── CARD DE CACHOEIRA ── */
+/* ── CARD (cachoeira ou trilha) ── */
 .cachoeira-card {
   display: grid;
   grid-template-columns: 1fr 1fr;

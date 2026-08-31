@@ -1,0 +1,3 @@
+/* O reset, as variáveis de cor/tipografia e o restante do estilo global
+   do site vêm de "./styles/global.css" (importado em App.jsx).
+   Este arquivo só existe para não quebrar o import em main.jsx. */
