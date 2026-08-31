@@ -1,0 +1,56 @@
+name: Deploy React para GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v6
+
+      - name: Configurar Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: tgreact-convertido/package-lock.json
+
+      - name: Instalar dependências
+        working-directory: ./tgreact-convertido
+        run: npm ci
+
+      - name: Fazer build do React
+        working-directory: ./tgreact-convertido
+        run: npm run build
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Enviar arquivos do site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: './tgreact-convertido/dist'
+
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
