@@ -6,7 +6,7 @@ function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuAberto, setMenuAberto] = useState(false);
 
- 
+  // ── HEADER MUDA DE COR AO ROLAR A PÁGINA ──
   useEffect(() => {
     function aoRolar() {
       setScrolled(window.scrollY > 60);
@@ -15,6 +15,7 @@ function Header() {
     return () => window.removeEventListener('scroll', aoRolar);
   }, []);
 
+  // ── TRAVA O SCROLL DO FUNDO QUANDO O MENU MOBILE ESTÁ ABERTO ──
   useEffect(() => {
     document.body.style.overflow = menuAberto ? 'hidden' : '';
   }, [menuAberto]);
