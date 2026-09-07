@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-// Sempre que a rota ou a âncora (#contato, #servicos, etc.) mudar,
-// rola suavemente até a seção certa. Sem âncora, volta ao topo.
+
 function ScrollToHash() {
   const { pathname, hash } = useLocation();
 
