@@ -43,8 +43,7 @@ function Header() {
           </Link>
 
           <nav className="nav-desktop">
-            <Link to="/#servicos">Serviços</Link>
-            <Link to="/#destinos">Destinos</Link>
+            <Link to="/#categorias">Categorias</Link>
             <Link to="/passeios">Passeios Prontos</Link>
             <Link to="/#sobre">Sobre</Link>
             <Link to="/#contato" className="nav-cta">Orçamento</Link>
@@ -67,8 +66,7 @@ function Header() {
           ✕
         </button>
         <nav className="mobile-nav">
-          <Link to="/#servicos" className="mobile-link" onClick={fecharMenu}>Serviços</Link>
-          <Link to="/#destinos" className="mobile-link" onClick={fecharMenu}>Destinos</Link>
+          <Link to="/#categorias" className="mobile-link" onClick={fecharMenu}>Categorias</Link>
           <Link to="/passeios" className="mobile-link" onClick={fecharMenu}>Passeios Prontos</Link>
           <Link to="/#sobre" className="mobile-link" onClick={fecharMenu}>Sobre</Link>
           <Link to="/#faq" className="mobile-link" onClick={fecharMenu}>Dúvidas</Link>

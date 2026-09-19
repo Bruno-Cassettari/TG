@@ -1,0 +1,95 @@
+/* ════════════════════════════════════════════════════════
+   CATEGORIAS.CSS
+   Hub da home: um card por categoria (esporte, natureza,
+   gastronomia, hospedagem, cultura...), cada um com foto,
+   ícone + nome sempre visível e overlay "Saiba mais" no hover.
+   Substitui as antigas seções "Serviços" e "Destinos" — tudo
+   agora vive aqui dentro.
+   ════════════════════════════════════════════════════════ */
+
+.categorias {
+  padding: 100px 0;
+  background: var(--off-white);
+}
+
+.categorias-intro {
+  max-width: 620px;
+  margin: 0 auto 48px;
+  text-align: center;
+  color: var(--cinza-texto);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.categoria-card {
+  position: relative;
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  cursor: pointer;
+}
+
+.categoria-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.categoria-card:hover img { transform: scale(1.08); }
+
+.categoria-info {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 70%);
+  color: white;
+}
+
+.categoria-icone {
+  font-size: 18px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.categoria-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.categoria-hover {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 78, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transicao);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 12px;
+}
+
+.categoria-card:hover .categoria-hover { opacity: 1; }
+
+/* ── RESPONSIVO ── */
+@media (max-width: 1100px) {
+  .categorias-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .categorias { padding: 72px 0; }
+  .categorias-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+}

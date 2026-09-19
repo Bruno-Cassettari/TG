@@ -1,0 +1,141 @@
+/* ════════════════════════════════════════════════════════
+   NOVIDADES.CSS
+   Carrossel de novidades e eventos atuais de São Bento,
+   logo abaixo da seção "Quem somos". Imagens são placeholder
+   até o conteúdo real de eventos ser definido.
+   ════════════════════════════════════════════════════════ */
+
+.novidades {
+  padding: 90px 0 100px;
+  background: white;
+}
+
+.container-largo {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.carrossel-wrap {
+  position: relative;
+}
+
+.carrossel-viewport {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 620px;
+  min-height: 620px;
+}
+
+.carrossel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carrossel-slide.ativo { opacity: 1; z-index: 1; }
+
+.carrossel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carrossel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,20,0,0.88) 0%, rgba(0,20,0,0.1) 65%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 56px;
+  color: white;
+}
+
+.carrossel-tag {
+  display: inline-block;
+  width: fit-content;
+  background: var(--laranja);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.carrossel-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 4vw, 40px);
+  margin-bottom: 10px;
+}
+
+.carrossel-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.88);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+.carrossel-seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: var(--sombra);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--verde);
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  transition: background var(--transicao), transform var(--transicao);
+}
+
+.carrossel-seta:hover { background: var(--off-white); transform: translateY(-50%) scale(1.06); }
+.carrossel-seta.esquerda { left: 24px; }
+.carrossel-seta.direita { right: 24px; }
+
+.carrossel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.carrossel-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--cinza-claro);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transicao), transform var(--transicao);
+}
+
+.carrossel-dot.ativo { background: var(--laranja); transform: scale(1.3); }
+
+/* ── RESPONSIVO ── */
+@media (max-width: 1100px) {
+  .carrossel-viewport { height: 460px; }
+}
+
+@media (max-width: 700px) {
+  .novidades { padding: 60px 0 72px; }
+  .container-largo { padding: 0 20px; }
+  .carrossel-viewport { height: 340px; }
+  .carrossel-overlay { padding: 28px; }
+  .carrossel-seta { width: 40px; height: 40px; font-size: 17px; }
+  .carrossel-seta.esquerda { left: 12px; }
+  .carrossel-seta.direita { right: 12px; }
+}

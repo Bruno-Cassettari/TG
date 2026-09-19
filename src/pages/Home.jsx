@@ -1,10 +1,37 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import capapedra from '../assets/images/capapedra.jpeg';
 import capacachu from '../assets/images/capacachu.jpeg';
 import cultura from '../assets/images/cultura.webp';
+import monjolinho from '../assets/images/monjolinho.jpeg';
+import toboga from '../assets/images/toboga.jpeg';
+import amores from '../assets/images/amores.jpeg';
+import toldi from '../assets/images/toldi.jpg';
+import pedrabau from '../assets/images/pedrabau.png';
+import '../styles/categorias.css';
+import '../styles/novidades.css';
 
-const NUMERO_WHATSAPP = '5512997171694';
+const NUMERO_WHATSAPP = '5512987100349';
+
+/* Imagens de placeholder — trocar quando tivermos os eventos/novidades reais */
+const NOVIDADES = [
+  { tag: 'Novidade', titulo: 'Hub de São Bento no ar', descricao: 'Agora você encontra esporte, natureza, gastronomia e cultura tudo em um só lugar.', imagem: toldi },
+  { tag: 'Evento', titulo: 'Festival de Inverno se aproxima', descricao: 'Fique de olho na agenda cultural da cidade nos próximos meses.', imagem: cultura },
+  { tag: 'Aviso', titulo: 'Condições das trilhas', descricao: 'Confira o clima antes de subir a Pedra do Baú nesta época do ano.', imagem: monjolinho },
+];
+
+const CATEGORIAS = [
+  { icone: '🍴', titulo: 'Gastronomia', imagem: toldi, rota: '/#contato' },
+  { icone: '🏡', titulo: 'Hospedagem', imagem: amores, rota: '/#contato' },
+  { icone: '🌿', titulo: 'Natureza & Trilhas', imagem: capacachu, rota: '/cachoeiras' },
+  { icone: '⛰️', titulo: 'Pedra do Baú', imagem: capapedra, rota: '/pedra-do-bau' },
+  { icone: '🪂', titulo: 'Aventura & Esportes', imagem: toboga, rota: '/#contato' },
+  { icone: '🌅', titulo: 'Nascer & Pôr do Sol', imagem: pedrabau, rota: '/#contato' },
+  { icone: '🏛️', titulo: 'Cultura & História', imagem: cultura, rota: '/#contato' },
+  { icone: '🐎', titulo: 'Passeios a Cavalo', imagem: monjolinho, rota: '/#contato' },
+  { icone: '🚐', titulo: 'City Tour', imagem: capapedra, rota: '/passeios' },
+  { icone: '🧭', titulo: 'Passeios Personalizados', imagem: capacachu, rota: '/personalizado' },
+];
 
 const FAQ_ITENS = [
   {
@@ -31,12 +58,27 @@ const FAQ_ITENS = [
 
 function Home() {
   const [faqAberto, setFaqAberto] = useState(null);
+  const [slideAtivo, setSlideAtivo] = useState(0);
 
   const nomeRef = useRef(null);
   const emailRef = useRef(null);
   const whatsappRef = useRef(null);
   const interesseRef = useRef(null);
   const mensagemRef = useRef(null);
+
+  function slideAnterior() {
+    setSlideAtivo((atual) => (atual === 0 ? NOVIDADES.length - 1 : atual - 1));
+  }
+
+  function proximoSlide() {
+    setSlideAtivo((atual) => (atual === NOVIDADES.length - 1 ? 0 : atual + 1));
+  }
+
+  // ── TROCA AUTOMÁTICA A CADA 6s ──
+  useEffect(() => {
+    const intervalo = setInterval(proximoSlide, 6000);
+    return () => clearInterval(intervalo);
+  }, []);
 
   function alternarFaq(index) {
     setFaqAberto((atual) => (atual === index ? null : index));
@@ -82,7 +124,7 @@ function Home() {
           </p>
           <div className="hero-btns">
             <Link to="/#contato" className="btn-primary">Fazer Orçamento</Link>
-            <Link to="/#destinos" className="btn-ghost">Ver Destinos</Link>
+           <Link to="/#categorias" className="btn-ghost">Ver Categorias</Link>
           </div>
         </div>
         <div className="hero-scroll">
@@ -121,103 +163,67 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
 
-      {/* ── SERVIÇOS ── */}
-      <section className="servicos" id="servicos">
-        <div className="container">
-          <div className="section-header">
-            <span className="label">O que oferecemos</span>
-            <h2>Nossos Serviços</h2>
-          </div>
-          <div className="servicos-grid">
-            <Link to="/passeios">
-              <div className="servico-card">
-                <div className="servico-img">
-                  <img
-                    src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=600&q=80"
-                    alt="City Tour"
-                  />
-                  <div className="servico-overlay"><span>Saiba mais →</span></div>
+        {/* ── NOVIDADES (CARROSSEL) ── */}
+          <section className="novidades">
+            <div className="container-largo">
+              <div className="carrossel-wrap">
+                <div className="carrossel-viewport">
+                  {NOVIDADES.map((item, index) => (
+                    <div className={`carrossel-slide ${index === slideAtivo ? 'ativo' : ''}`} key={item.titulo}>
+                      <img src={item.imagem} alt={item.titulo} />
+                      <div className="carrossel-overlay">
+                        <span className="carrossel-tag">{item.tag}</span>
+                        <h3 className="carrossel-titulo">{item.titulo}</h3>
+                        <p className="carrossel-desc">{item.descricao}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="servico-info">
-                  <h3>City Tour</h3>
-                  <p>
-                    Conheça os principais pontos turísticos da cidade com guia
-                    especializado e transporte incluso.
-                  </p>
+                <button className="carrossel-seta esquerda" aria-label="Anterior" onClick={slideAnterior}>‹</button>
+                <button className="carrossel-seta direita" aria-label="Próximo" onClick={proximoSlide}>›</button>
+                <div className="carrossel-dots">
+                  {NOVIDADES.map((item, index) => (
+                    <button
+                      key={item.titulo}
+                      className={`carrossel-dot ${index === slideAtivo ? 'ativo' : ''}`}
+                      aria-label={`Ir para slide ${index + 1}`}
+                      onClick={() => setSlideAtivo(index)}
+                    ></button>
+                  ))}
                 </div>
-              </div>
-            </Link>
-
-            <Link to="/personalizado">
-              <div className="servico-card destaque">
-                <div className="servico-img">
-                  <img
-                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&q=80"
-                    alt="Passeios Personalizados"
-                  />
-                  <div className="servico-overlay"><span>Saiba mais →</span></div>
-                </div>
-                <div className="servico-info">
-                  <span className="tag-destaque">Mais popular</span>
-                  <h3>Passeios Personalizados</h3>
-                  <p>
-                    Monte seu roteiro ideal com base nos seus interesses, tempo
-                    disponível e nível de experiência.
-                  </p>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── DESTINOS ── */}
-      <section className="destinos" id="destinos">
-        <div className="container">
-          <div className="section-header">
-            <span className="label">Onde ir</span>
-            <h2>Conheça os Destinos</h2>
-          </div>
-          <div className="destinos-grid">
-            <div className="destino-card destino-grande">
-              <Link to="/pedra-do-bau">
-                <img src={capapedra} alt="Pedra do Baú" />
-                <div className="destino-info">
-                  <span className="destino-tag">Trilha · Alta dificuldade</span>
-                  <h3>Pedra do Baú</h3>
-                  <p>
-                    O cartão postal de São Bento. Vista de 360° no topo da rocha mais
-                    famosa da Mantiqueira.
-                  </p>
-                </div>
-              </Link>
-            </div>
-
-            <Link to="/cachoeiras" className="destino-card">
-              <img src={capacachu} alt="Cachoeiras" />
-              <div className="destino-info">
-                <span className="destino-tag">Natureza · Fácil acesso</span>
-                <h3>Cachoeiras</h3>
-                <p>Águas cristalinas e piscinas naturais escondidas na mata.</p>
-              </div>
-            </Link>
-
-            <div className="destino-card">
-              <img src={cultura} alt="Trilhas" />
-              <div className="destino-info">
-                <span className="destino-tag">Gastronomia • Cultura • Mirantes</span>
-                <h3>Onde ir</h3>
-                <p>
-                  Descubra sabores, lugares especiais e outros encantos de São Bento do
-                  Sapucaí.
-                </p>
               </div>
             </div>
-          </div>
-        </div>
+          </section>
+
+
       </section>
+
+       {/* ── CATEGORIAS (HUB) ── */}
+        <section className="categorias" id="categorias">
+          <div className="container">
+            <div className="section-header">
+              <span className="label">O hub de São Bento</span>
+              <h2>Tudo o que a cidade oferece, por categoria</h2>
+            </div>
+            <p className="categorias-intro">
+              Reunimos esporte, natureza, gastronomia, hospedagem e cultura em um só lugar.
+              Escolha uma categoria e fale com quem oferece o serviço.
+            </p>
+            <div className="categorias-grid">
+              {CATEGORIAS.map((cat) => (
+                <Link to={cat.rota} className="categoria-card" key={cat.titulo}>
+                  <img src={cat.imagem} alt={cat.titulo} />
+                  <div className="categoria-info">
+                    <span className="categoria-icone">{cat.icone}</span>
+                    <h3>{cat.titulo}</h3>
+                  </div>
+                  <div className="categoria-hover">Saiba mais →</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>     
 
       {/* ── FAQ ── */}
       <section className="faq" id="faq">

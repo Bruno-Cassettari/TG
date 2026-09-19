@@ -246,184 +246,9 @@ a { text-decoration: none; color: inherit; }
   font-weight: 500;
 }
 
-/* ── SERVIÇOS ── */
-.servicos {
-  padding: 100px 0;
-  background: white;
-}
 
-.servicos-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 900px;
-  margin: 0 auto;
-  align-items: center;
-}
 
-.servico-card {
-  border-radius: var(--radius-grande);
-  overflow: hidden;
-  background: white;
-  box-shadow: var(--sombra);
-  transition: transform var(--transicao), box-shadow var(--transicao);
-}
 
-.servico-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--sombra-forte);
-}
-
-.servico-card.destaque {
-  border: 2px solid var(--laranja);
-  box-shadow: var(--sombra-forte);
-  transform: scale(1.06);
-  position: relative;
-  z-index: 2;
-}
-
-.servico-card.destaque:hover {
-  transform: scale(1.06) translateY(-8px);
-}
-
-.servico-img {
-  position: relative;
-  overflow: hidden;
-  height: 220px;
-}
-
-.servico-card.destaque .servico-img {
-  height: 250px;
-}
-
-.servico-img img {
-  height: 100%;
-  transition: transform 0.5s ease;
-}
-
-.servico-card:hover .servico-img img { transform: scale(1.06); }
-
-.servico-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 78, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity var(--transicao);
-  color: white;
-  font-weight: 600;
-  font-size: 15px;
-  letter-spacing: 1px;
-}
-
-.servico-card:hover .servico-overlay { opacity: 1; }
-
-.servico-info {
-  padding: 24px;
-}
-
-.servico-card.destaque .servico-info {
-  padding: 28px;
-}
-
-.servico-info h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  margin-bottom: 8px;
-  color: var(--preto);
-}
-
-.servico-card.destaque .servico-info h3 {
-  font-size: 22px;
-}
-
-.servico-info p {
-  color: var(--cinza-texto);
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-.tag-destaque {
-  display: inline-block;
-  background: var(--laranja);
-  color: white;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 3px 10px;
-  border-radius: 100px;
-  margin-bottom: 8px;
-}
-
-/* ── DESTINOS ── */
-.destinos {
-  padding: 100px 0;
-  background: var(--off-white);
-}
-
-.destinos-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 24px;
-}
-
-.destino-card {
-  position: relative;
-  border-radius: var(--radius-grande);
-  overflow: hidden;
-  display: block;
-  cursor: pointer;
-}
-
-.destino-card img {
-  width: 100%;
-  height: 260px;
-  transition: transform 0.5s ease;
-}
-
-.destino-grande img { height: 544px; }
-
-.destino-card:hover img { transform: scale(1.05); }
-
-.destino-grande {
-  grid-row: span 2;
-}
-
-.destino-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 28px;
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
-  color: white;
-}
-
-.destino-tag {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--laranja);
-  margin-bottom: 6px;
-}
-
-.destino-info h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  margin-bottom: 6px;
-}
-
-.destino-info p {
-  font-size: 13px;
-  color: rgba(255,255,255,0.8);
-  line-height: 1.5;
-}
 
 /* ── FAQ ── */
 .faq {
@@ -616,19 +441,11 @@ a { text-decoration: none; color: inherit; }
   .hamburger   { display: flex; }
 
   .sobre-grid       { grid-template-columns: 1fr; gap: 48px; }
-  .servicos-grid    { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; gap: 48px; }
-  .servico-card.destaque { transform: none; order: -1; }
-  .servico-card.destaque:hover { transform: translateY(-8px); }
-  .destinos-grid    { grid-template-columns: 1fr; }
-  .destino-grande   { grid-row: span 1; }
-  .destino-grande img { height: 300px; }
   .contato-grid     { grid-template-columns: 1fr; gap: 48px; }
 }
 
 @media (max-width: 600px) {
   .sobre    { padding: 72px 0; }
-  .servicos { padding: 72px 0; }
-  .destinos { padding: 72px 0; }
   .faq      { padding: 72px 0; }
   .contato  { padding: 72px 0; }
 
