@@ -10,12 +10,13 @@ import toldi from '../assets/images/toldi.jpg';
 import pedrabau from '../assets/images/pedrabau.png';
 import '../styles/categorias.css';
 import '../styles/novidades.css';
+import evento from '../assets/images/evento.png';
 
 const NUMERO_WHATSAPP = '5512987100349';
 
 /* Imagens de placeholder — trocar quando tivermos os eventos/novidades reais */
 const NOVIDADES = [
-  { tag: 'Novidade', titulo: 'Hub de São Bento no ar', descricao: 'Agora você encontra esporte, natureza, gastronomia e cultura tudo em um só lugar.', imagem: toldi },
+  { tag: 'Novidade', titulo: 'Hub de São Bento no ar', descricao: 'Agora você encontra esporte, natureza, gastronomia e cultura tudo em um só lugar.', imagem: evento },
   { tag: 'Evento', titulo: 'Festival de Inverno se aproxima', descricao: 'Fique de olho na agenda cultural da cidade nos próximos meses.', imagem: cultura },
   { tag: 'Aviso', titulo: 'Condições das trilhas', descricao: 'Confira o clima antes de subir a Pedra do Baú nesta época do ano.', imagem: monjolinho },
 ];
@@ -133,36 +134,7 @@ function Home() {
         </div>
       </section>
 
-      {/* ── SOBRE ── */}
-      <section className="sobre" id="sobre">
-        <div className="container">
-          <div className="sobre-grid">
-            <div className="sobre-texto">
-              <span className="label">Quem somos</span>
-              <h2>Apaixonados por São Bento do Sapucaí</h2>
-              <p>
-                Somos um portal turístico dedicado a conectar visitantes com tudo que a
-                cidade tem de melhor — das cachoeiras cristalinas às trilhas da Pedra do
-                Baú. Oferecemos roteiros personalizados, indicações de gastronomia local
-                e contato direto com os melhores guias da região.
-              </p>
-            </div>
-            <div className="sobre-numeros">
-              <div className="numero-card">
-                <strong>15+</strong>
-                <span>Destinos mapeados</span>
-              </div>
-              <div className="numero-card">
-                <strong>8+</strong>
-                <span>Guias parceiros</span>
-              </div>
-              <div className="numero-card">
-                <strong>100%</strong>
-                <span>Personalizado</span>
-              </div>
-            </div>
-          </div>
-        </div>
+     
 
         {/* ── NOVIDADES (CARROSSEL) ── */}
           <section className="novidades">
@@ -196,7 +168,36 @@ function Home() {
             </div>
           </section>
 
-
+     {/* ── SOBRE ── */}
+    <section className="quem-somos">              
+      <div className="container">
+          <div className="sobre-grid">
+            <div className="sobre-texto">
+              <span className="label">Quem somos</span>
+              <h2>Apaixonados por São Bento do Sapucaí</h2>
+              <p>
+                Somos um portal turístico dedicado a conectar visitantes com tudo que a
+                cidade tem de melhor — das cachoeiras cristalinas às trilhas da Pedra do
+                Baú. Oferecemos roteiros personalizados, indicações de gastronomia local
+                e contato direto com os melhores guias da região.
+              </p>
+            </div>
+            <div className="sobre-numeros">
+              <div className="numero-card">
+                <strong>15+</strong>
+                <span>Destinos mapeados</span>
+              </div>
+              <div className="numero-card">
+                <strong>8+</strong>
+                <span>Guias parceiros</span>
+              </div>
+              <div className="numero-card">
+                <strong>100%</strong>
+                <span>Personalizado</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
        {/* ── CATEGORIAS (HUB) ── */}

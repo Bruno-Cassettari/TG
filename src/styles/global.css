@@ -36,7 +36,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ── UTILITÁRIOS ── */
 .container {
-  max-width: 1180px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -188,6 +188,11 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ── SOBRE ── */
+.quem-somos {
+  padding: 100px 0;
+  background: white; /* ou var(--off-white), se quiser manter a cor creme */
+}
+
 .sobre {
   padding: 100px 0;
   background: var(--off-white);
@@ -203,7 +208,7 @@ a { text-decoration: none; color: inherit; }
 .sobre-texto h2 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(26px, 3.5vw, 38px);
-  line-height: 1.25;
+  line-height: 2;
   margin-bottom: 20px;
 }
 
@@ -245,6 +250,8 @@ a { text-decoration: none; color: inherit; }
   color: var(--cinza-texto);
   font-weight: 500;
 }
+
+
 
 
 

@@ -7,13 +7,13 @@
 
 .novidades {
   padding: 90px 0 100px;
-  background: white;
+  background: var(--off-white);
 }
 
 .container-largo {
-  max-width: 1440px;
+  max-width: 1540px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 10px;
 }
 
 .carrossel-wrap {
