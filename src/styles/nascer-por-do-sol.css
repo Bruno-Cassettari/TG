@@ -1,0 +1,6 @@
+/* Só o fundo do hero. O resto vem do cardgrid.css e do cachoeiras.css */
+.nascer-hero-bg {
+  background:
+    linear-gradient(to bottom, rgba(0,30,0,0.55) 0%, rgba(120,50,0,0.3) 55%, rgba(0,30,0,0.7) 100%),
+    url('../assets/images/pedrabau.png') center/cover no-repeat;
+}

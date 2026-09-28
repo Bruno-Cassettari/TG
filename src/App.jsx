@@ -8,6 +8,7 @@ import PedraDoBau from './pages/PedraDoBau';
 import Tour from './pages/Tour';
 import Personalizado from './pages/Personalizado';
 import './styles/global.css';
+import NascerPorDoSol from './pages/NascerPorDoSol';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/pedra-do-bau" element={<PedraDoBau />} />
         <Route path="/passeios" element={<Tour />} />
         <Route path="/personalizado" element={<Personalizado />} />
+        <Route path="/nascer-por-do-sol" element={<NascerPorDoSol />} />
       </Routes>
       <Footer />
     </>

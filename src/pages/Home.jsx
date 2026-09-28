@@ -11,6 +11,17 @@ import pedrabau from '../assets/images/pedrabau.png';
 import '../styles/categorias.css';
 import '../styles/novidades.css';
 import evento from '../assets/images/evento.png';
+import gastronomia from '../assets/images/gastronomia.jpg'
+import hospedagem from '../assets/images/img-hospedagem.jpg'
+import trilha from '../assets/images/trilha.jpg'
+import trilhapedra from '../assets/images/trilhapedra.webp'
+import esporte from '../assets/images/esporte.webp'
+import nascer from '../assets/images/nascer.jpg'
+import historia from '../assets/images/historia.jpeg'
+import cavalo from '../assets/images/cavalo.jpg'
+import personalizado from '../assets/images/personalizado.jpg'
+import tour from '../assets/images/tour.jpg'
+
 
 const NUMERO_WHATSAPP = '5512987100349';
 
@@ -22,16 +33,16 @@ const NOVIDADES = [
 ];
 
 const CATEGORIAS = [
-  { icone: '🍴', titulo: 'Gastronomia', imagem: toldi, rota: '/#contato' },
-  { icone: '🏡', titulo: 'Hospedagem', imagem: amores, rota: '/#contato' },
-  { icone: '🌿', titulo: 'Natureza & Trilhas', imagem: capacachu, rota: '/cachoeiras' },
-  { icone: '⛰️', titulo: 'Pedra do Baú', imagem: capapedra, rota: '/pedra-do-bau' },
-  { icone: '🪂', titulo: 'Aventura & Esportes', imagem: toboga, rota: '/#contato' },
-  { icone: '🌅', titulo: 'Nascer & Pôr do Sol', imagem: pedrabau, rota: '/#contato' },
-  { icone: '🏛️', titulo: 'Cultura & História', imagem: cultura, rota: '/#contato' },
-  { icone: '🐎', titulo: 'Passeios a Cavalo', imagem: monjolinho, rota: '/#contato' },
-  { icone: '🚐', titulo: 'City Tour', imagem: capapedra, rota: '/passeios' },
-  { icone: '🧭', titulo: 'Passeios Personalizados', imagem: capacachu, rota: '/personalizado' },
+  { icone: '🍴', titulo: 'Gastronomia', imagem: gastronomia, rota: '/#contato' },
+  { icone: '🏡', titulo: 'Hospedagem', imagem: hospedagem, rota: '/#contato' },
+  { icone: '🌿', titulo: 'Natureza & Trilhas', imagem: trilha, rota: '/cachoeiras' },
+  { icone: '⛰️', titulo: 'Pedra do Baú', imagem: trilhapedra, rota: '/pedra-do-bau' },
+  { icone: '🪂', titulo: 'Aventura & Esportes', imagem: esporte, rota: '/#contato' },
+  { icone: '🌅', titulo: 'Nascer & Pôr do Sol', imagem: nascer, rota: '/nascer-por-do-sol' },
+  { icone: '🏛️', titulo: 'Cultura & História', imagem: historia, rota: '/#contato' },
+  { icone: '🐎', titulo: 'Passeios a Cavalo', imagem: cavalo, rota: '/#contato' },
+  { icone: '🚐', titulo: 'City Tour', imagem: personalizado, rota: '/passeios' },
+  { icone: '🧭', titulo: 'Passeios Personalizados', imagem: tour, rota: '/personalizado' },
 ];
 
 const FAQ_ITENS = [
