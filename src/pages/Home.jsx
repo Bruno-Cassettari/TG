@@ -33,14 +33,14 @@ const NOVIDADES = [
 ];
 
 const CATEGORIAS = [
-  { icone: '🍴', titulo: 'Gastronomia', imagem: gastronomia, rota: '/#contato' },
-  { icone: '🏡', titulo: 'Hospedagem', imagem: hospedagem, rota: '/#contato' },
+  { icone: '🍴', titulo: 'Gastronomia', imagem: gastronomia, rota: '/gastronomia' },
+  { icone: '🏡', titulo: 'Hospedagem', imagem: hospedagem, rota: '/hospedagem' },
   { icone: '🌿', titulo: 'Natureza & Trilhas', imagem: trilha, rota: '/cachoeiras' },
   { icone: '⛰️', titulo: 'Pedra do Baú', imagem: trilhapedra, rota: '/pedra-do-bau' },
   { icone: '🪂', titulo: 'Aventura & Esportes', imagem: esporte, rota: '/#contato' },
   { icone: '🌅', titulo: 'Nascer & Pôr do Sol', imagem: nascer, rota: '/nascer-por-do-sol' },
   { icone: '🏛️', titulo: 'Cultura & História', imagem: historia, rota: '/#contato' },
-  { icone: '🐎', titulo: 'Passeios a Cavalo', imagem: cavalo, rota: '/#contato' },
+  { icone: '🐎', titulo: 'Passeios a Cavalo', imagem: cavalo, rota: '/passeiocavalo' },
   { icone: '🚐', titulo: 'City Tour', imagem: personalizado, rota: '/passeios' },
   { icone: '🧭', titulo: 'Passeios Personalizados', imagem: tour, rota: '/personalizado' },
 ];

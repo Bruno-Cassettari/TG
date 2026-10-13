@@ -1,0 +1,74 @@
+/* ════════════════════════════════════════════════════════
+   HOSPEDAGEM.CSS
+   Complementa o gastronomia.css (que a página também importa):
+   etiquetas de tipo (Pousada, Chalé...) e carrossel de fotos.
+   ════════════════════════════════════════════════════════ */
+
+/* etiquetas de tipo de hospedagem */
+.gastro-periodo.pousada { background: rgba(0,78,0,0.1); color: var(--verde); }
+.gastro-periodo.chale   { background: rgba(224,123,0,0.14); color: var(--laranja-hover); }
+.gastro-periodo.hotel   { background: var(--preto); color: white; }
+
+/* ── CARROSSEL DE FOTOS DENTRO DO CARD ── */
+.hosp-car {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hosp-car img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.hosp-car img.ativo { opacity: 1; }
+
+.hosp-car-seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.92);
+  color: var(--verde);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: var(--sombra);
+  transition: background var(--transicao);
+}
+
+.hosp-car-seta:hover { background: white; }
+.hosp-car-seta.esquerda { left: 12px; }
+.hosp-car-seta.direita { right: 12px; }
+
+.hosp-car-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  z-index: 2;
+}
+
+.hosp-car-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: background var(--transicao), transform var(--transicao);
+}
+
+.hosp-car-dots button.ativo { background: var(--laranja); transform: scale(1.3); }

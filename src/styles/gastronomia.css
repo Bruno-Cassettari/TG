@@ -1,0 +1,336 @@
+/* ════════════════════════════════════════════════════════
+   GASTRONOMIA.CSS
+   Página de gastronomia no formato "folder digital":
+   capa com índice + folha de cardápio com filtro por período.
+   Usa as mesmas cores, fontes e raios do restante do site.
+   ════════════════════════════════════════════════════════ */
+
+/* ── CAPA ── */
+.gastro-capa {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(224,123,0,0.16), transparent 45%),
+    linear-gradient(160deg, var(--verde-escuro) 0%, var(--verde) 100%);
+  padding: 150px 0 80px;
+  color: white;
+}
+
+.gastro-capa-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.gastro-capa-texto h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 900;
+  line-height: 1.12;
+  margin: 8px 0 20px;
+}
+
+.gastro-capa-texto p {
+  color: rgba(255,255,255,0.8);
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 460px;
+}
+
+/* ── ÍNDICE (tipo sumário de folder) ── */
+.gastro-indice {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: var(--radius-grande);
+  padding: 28px 28px 20px;
+  backdrop-filter: blur(6px);
+}
+
+.gastro-indice-titulo {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #ffb347;
+  margin-bottom: 14px;
+}
+
+.gastro-indice ul { list-style: none; }
+
+.gastro-indice a {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 12px 0;
+  color: white;
+  transition: color var(--transicao);
+}
+
+.gastro-indice a:hover { color: #ffb347; }
+
+.gastro-indice-num {
+  font-family: 'Playfair Display', serif;
+  color: var(--laranja);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.gastro-indice-nome {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+}
+
+.gastro-indice-periodo {
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  white-space: nowrap;
+}
+
+/* linha pontilhada de cardápio */
+.gastro-pontilhado {
+  flex: 1;
+  border-bottom: 2px dotted rgba(150,150,150,0.45);
+  transform: translateY(-4px);
+  min-width: 24px;
+}
+
+.gastro-indice .gastro-pontilhado { border-bottom-color: rgba(255,255,255,0.3); }
+
+/* ── GUIA ── */
+.gastro-guia {
+  background: var(--off-white);
+  padding: 72px 0 100px;
+}
+
+.gastro-filtros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.gastro-chip {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 100px;
+  border: 1.5px solid #dcdcdc;
+  background: white;
+  color: var(--cinza-texto);
+  cursor: pointer;
+  transition: background var(--transicao), color var(--transicao), border-color var(--transicao);
+}
+
+.gastro-chip:hover { border-color: var(--verde); color: var(--verde); }
+
+.gastro-chip.ativo {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: white;
+}
+
+/* ── FOLHA DE CARDÁPIO ── */
+.gastro-folha {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: white;
+  border-radius: var(--radius-grande);
+  border-left: 5px solid var(--laranja);
+  box-shadow: var(--sombra);
+  padding: 8px 48px;
+}
+
+/* card dividido 50/50: informação à esquerda, foto à direita */
+.gastro-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px dashed #ddd;
+  scroll-margin-top: 110px;
+}
+
+.gastro-item:last-child { border-bottom: none; }
+
+.gastro-cabeca {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.gastro-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--laranja);
+  opacity: 0.85;
+}
+
+.gastro-tipo {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--verde);
+}
+
+.gastro-topo {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+}
+
+.gastro-topo h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: var(--preto);
+  line-height: 1.2;
+}
+
+.gastro-periodos {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.gastro-periodo {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.gastro-periodo.almoco { background: rgba(0,78,0,0.1); color: var(--verde); }
+.gastro-periodo.jantar { background: rgba(224,123,0,0.14); color: var(--laranja-hover); }
+.gastro-periodo.noite  { background: var(--preto); color: white; }
+
+.gastro-desc {
+  color: var(--cinza-texto);
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 14px 0 16px;
+}
+
+.gastro-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+
+.gastro-tags span {
+  font-size: 12px;
+  color: var(--cinza-texto);
+  background: var(--off-white);
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+
+.gastro-acoes { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.gastro-btn {
+  background: var(--verde);
+  color: white;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: 100px;
+  border: 1.5px solid var(--verde);
+  transition: background var(--transicao), transform var(--transicao);
+}
+
+.gastro-btn:hover { background: var(--verde-claro); border-color: var(--verde-claro); transform: translateY(-2px); }
+
+.gastro-btn.secundario { background: transparent; color: var(--verde); }
+.gastro-btn.secundario:hover { background: var(--verde); color: white; }
+
+/* ── FOTO ── */
+.gastro-foto {
+  border-radius: var(--radius-grande);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--off-white);
+}
+
+.gastro-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gastro-item:hover .gastro-foto img { transform: scale(1.05); }
+
+.gastro-foto-vazia {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(160deg, var(--verde-escuro), var(--verde-claro));
+  color: rgba(255,255,255,0.85);
+}
+
+.gastro-foto-vazia span { font-size: 56px; }
+.gastro-foto-vazia small { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; }
+
+.gastro-aviso {
+  text-align: center;
+  color: var(--cinza-texto);
+  font-size: 13px;
+  margin: 28px auto 64px;
+}
+
+/* ── CTA PARCEIROS ── */
+.gastro-parceiro {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: linear-gradient(160deg, var(--verde-escuro), var(--verde));
+  color: white;
+  border-radius: var(--radius-grande);
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.gastro-parceiro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 3vw, 30px);
+  margin-bottom: 8px;
+}
+
+.gastro-parceiro p {
+  color: rgba(255,255,255,0.8);
+  font-size: 14.5px;
+  line-height: 1.7;
+  max-width: 440px;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 900px) {
+  .gastro-capa { padding: 120px 0 56px; }
+  .gastro-capa-grid { grid-template-columns: 1fr; gap: 36px; }
+}
+
+@media (max-width: 860px) {
+  .gastro-item { grid-template-columns: 1fr; gap: 24px; }
+  /* no celular a foto sobe para antes do texto */
+  .gastro-foto { order: -1; }
+}
+
+@media (max-width: 640px) {
+  .gastro-folha { padding: 4px 22px; }
+  .gastro-item { padding: 28px 0; }
+  .gastro-num { font-size: 32px; }
+  .gastro-topo .gastro-pontilhado { display: none; }
+  .gastro-topo h3 { font-size: 24px; }
+  .gastro-parceiro { padding: 32px 24px; }
+  .gastro-indice-periodo { display: none; }
+}

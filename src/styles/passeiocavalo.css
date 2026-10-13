@@ -1,0 +1,295 @@
+/* ════════════════════════════════════════════════════════
+   PASSEIO-CAVALO.CSS
+   Página de passeios a cavalo: topo direto, "como funciona" em
+   3 passos, cards de roteiro com foto no topo e chamada final.
+   Mesmas cores, fontes e raios do restante do portal.
+   ════════════════════════════════════════════════════════ */
+
+/* ── TOPO ── */
+.cav-topo {
+  background:
+    radial-gradient(circle at 80% 15%, rgba(224,123,0,0.2), transparent 50%),
+    linear-gradient(160deg, var(--verde-escuro) 0%, var(--verde) 100%);
+  color: white;
+  padding: 160px 0 90px;
+}
+
+.cav-topo-conteudo { max-width: 760px; }
+
+.cav-topo h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 6vw, 62px);
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 8px 0 20px;
+}
+
+.cav-topo p {
+  color: rgba(255,255,255,0.82);
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+
+.cav-topo-botoes, .cav-final-botoes {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.cav-btn-claro {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(255,255,255,0.55);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background var(--transicao), color var(--transicao);
+}
+
+.cav-btn-claro:hover { background: white; color: var(--verde); }
+
+/* ── COMO FUNCIONA ── */
+.cav-passos {
+  background: white;
+  padding: 56px 0;
+  border-bottom: 1px solid var(--cinza-claro);
+}
+
+.cav-passos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.cav-passo { display: flex; gap: 16px; align-items: flex-start; }
+
+.cav-passo-n {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--laranja);
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cav-passo h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.cav-passo p { color: var(--cinza-texto); font-size: 14px; line-height: 1.7; }
+
+/* ── ROTEIROS ── */
+.cav-roteiros {
+  background: var(--off-white);
+  padding: 90px 0 80px;
+  scroll-margin-top: 80px;
+}
+
+.cav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cav-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.cav-card:hover { transform: translateY(-6px); box-shadow: var(--sombra); }
+
+.cav-card-foto {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--off-white);
+  overflow: hidden;
+}
+
+.cav-card-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cav-card:hover .cav-card-foto img { transform: scale(1.06); }
+
+.cav-card-vazia {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(160deg, var(--verde-escuro), var(--verde-claro));
+  color: rgba(255,255,255,0.85);
+}
+
+.cav-card-vazia span { font-size: 52px; }
+.cav-card-vazia small { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; }
+
+.cav-card-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--laranja);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+
+.cav-card-corpo {
+  padding: 22px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cav-card-corpo h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.cav-card-corpo p {
+  color: var(--cinza-texto);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.cav-card-btn {
+  align-self: flex-start;
+  background: var(--verde);
+  color: white;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: 100px;
+  transition: background var(--transicao);
+}
+
+.cav-card-btn:hover { background: var(--verde-claro); }
+
+/* ── OUTROS ROTEIROS ── */
+.cav-outros {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.cav-outros-titulo {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--laranja);
+  margin-bottom: 14px;
+}
+
+.cav-outros-chips {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cav-outros-chips span {
+  background: white;
+  border: 1px solid var(--cinza-claro);
+  color: var(--cinza-texto);
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 100px;
+}
+
+/* ── CHAMADA FINAL ── */
+.cav-final {
+  background: linear-gradient(160deg, var(--verde-escuro), var(--verde));
+  color: white;
+  padding: 72px 0;
+}
+
+.cav-final-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.cav-final h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 4vw, 36px);
+  margin-bottom: 10px;
+}
+
+.cav-final p {
+  color: rgba(255,255,255,0.8);
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+/* ── BOTÃO FLUTUANTE ── */
+.cav-flutuante {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 50;
+  background: var(--laranja);
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 24px;
+  border-radius: 100px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transition: background var(--transicao), transform var(--transicao);
+}
+
+.cav-flutuante:hover { background: var(--laranja-hover); transform: translateY(-3px); }
+
+.cav-voltar {
+  background: var(--off-white);
+  text-align: center;
+  padding: 28px 0 36px;
+}
+
+.cav-voltar a { color: var(--verde); font-size: 14px; font-weight: 600; }
+.cav-voltar a:hover { color: var(--laranja); }
+
+/* ── RESPONSIVO ── */
+@media (max-width: 960px) {
+  .cav-grid { grid-template-columns: repeat(2, 1fr); }
+  .cav-passos-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+
+@media (max-width: 640px) {
+  .cav-topo { padding: 120px 0 64px; }
+  .cav-grid { grid-template-columns: 1fr; }
+  .cav-roteiros { padding: 64px 0 56px; }
+  .cav-final { padding: 56px 0; }
+  .cav-flutuante { right: 14px; bottom: 14px; padding: 12px 20px; }
+}

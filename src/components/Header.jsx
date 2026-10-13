@@ -45,7 +45,7 @@ function Header() {
           <nav className="nav-desktop">
             <Link to="/#categorias">Categorias</Link>
             <Link to="/passeios">Passeios Prontos</Link>
-            <Link to="/#sobre">Sobre</Link>
+            <Link to="/sobre-projeto">Sobre</Link>
             <Link to="/#contato" className="nav-cta">Orçamento</Link>
           </nav>
 
@@ -68,7 +68,7 @@ function Header() {
         <nav className="mobile-nav">
           <Link to="/#categorias" className="mobile-link" onClick={fecharMenu}>Categorias</Link>
           <Link to="/passeios" className="mobile-link" onClick={fecharMenu}>Passeios Prontos</Link>
-          <Link to="/#sobre" className="mobile-link" onClick={fecharMenu}>Sobre</Link>
+          <Link to="/sobre-projeto" className="mobile-link" onClick={fecharMenu}>Sobre</Link>
           <Link to="/#faq" className="mobile-link" onClick={fecharMenu}>Dúvidas</Link>
           <Link to="/#contato" className="mobile-link mobile-link-cta" onClick={fecharMenu}>
             Fazer Orçamento
