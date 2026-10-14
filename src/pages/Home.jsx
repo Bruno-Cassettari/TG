@@ -37,7 +37,7 @@ const CATEGORIAS = [
   { icone: '🏡', titulo: 'Hospedagem', imagem: hospedagem, rota: '/hospedagem' },
   { icone: '🌿', titulo: 'Natureza & Trilhas', imagem: trilha, rota: '/cachoeiras' },
   { icone: '⛰️', titulo: 'Pedra do Baú', imagem: trilhapedra, rota: '/pedra-do-bau' },
-  { icone: '🪂', titulo: 'Aventura & Esportes', imagem: esporte, rota: '/#contato' },
+  { icone: '🪂', titulo: 'Aventura & Esportes', imagem: esporte, rota: '/aventura' },
   { icone: '🌅', titulo: 'Nascer & Pôr do Sol', imagem: nascer, rota: '/nascer-por-do-sol' },
   { icone: '🏛️', titulo: 'Cultura & História', imagem: historia, rota: '/#contato' },
   { icone: '🐎', titulo: 'Passeios a Cavalo', imagem: cavalo, rota: '/passeiocavalo' },

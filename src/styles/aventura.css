@@ -1,0 +1,381 @@
+/* ════════════════════════════════════════════════════════
+   AVENTURA.CSS
+   Hub de Aventura & Esportes (/aventura) e página-modelo de
+   cada modalidade (/aventura/:slug). Mesmas cores, fontes e
+   raios do restante do portal.
+   ════════════════════════════════════════════════════════ */
+
+/* ── TOPO (hub e detalhe) ── */
+.av-topo {
+  background:
+    radial-gradient(circle at 85% 15%, rgba(224,123,0,0.2), transparent 50%),
+    linear-gradient(160deg, var(--verde-escuro) 0%, var(--verde) 100%);
+  color: white;
+  padding: 150px 0 80px;
+}
+
+.av-topo h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 5.5vw, 58px);
+  font-weight: 900;
+  line-height: 1.12;
+  margin: 8px 0 18px;
+  max-width: 760px;
+}
+
+.av-topo p {
+  color: rgba(255,255,255,0.82);
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 620px;
+}
+
+.av-numeros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.av-numero {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 20px;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.av-numero strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #ffb347;
+  line-height: 1.1;
+}
+
+.av-numero span { font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 4px; }
+
+/* ── MODALIDADES (hub) ── */
+.av-modalidades {
+  background: var(--off-white);
+  padding: 90px 0;
+}
+
+.av-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.av-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+  transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.av-card:hover { transform: translateY(-6px); box-shadow: var(--sombra); }
+
+.av-card-foto {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.av-card-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.av-card:hover .av-card-foto img { transform: scale(1.07); }
+
+.av-card-nivel {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--laranja);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+
+.av-card-hover {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,78,0,0.75);
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transicao);
+}
+
+.av-card:hover .av-card-hover { opacity: 1; }
+
+.av-card-corpo { padding: 22px 24px 26px; }
+
+.av-card-corpo h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.av-card-corpo p { color: var(--cinza-texto); font-size: 14px; line-height: 1.7; }
+
+/* ── SEGURANÇA / CUIDADOS ── */
+.av-seguranca, .av-cuidados {
+  background: white;
+  padding: 70px 0;
+}
+
+.av-cuidados { background: var(--off-white); }
+
+.av-seguranca-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.av-seguranca h2, .av-cuidados h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 3.5vw, 34px);
+  margin-top: 6px;
+}
+
+.av-seguranca-grid ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+
+.av-seguranca-grid li {
+  position: relative;
+  padding-left: 30px;
+  color: var(--cinza-texto);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.av-seguranca-grid li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--verde);
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── CHAMADA FINAL ── */
+.av-final {
+  background: linear-gradient(160deg, var(--verde-escuro), var(--verde));
+  color: white;
+  padding: 72px 0;
+}
+
+.av-final-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.av-final h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 4vw, 36px);
+  margin-bottom: 10px;
+}
+
+.av-final p { color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.7; max-width: 460px; }
+
+/* ════════ PÁGINA DE CADA MODALIDADE ════════ */
+.av-topo-detalhe { padding-bottom: 64px; }
+
+.av-voltar {
+  display: inline-block;
+  color: rgba(255,255,255,0.75);
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: color var(--transicao);
+}
+
+.av-voltar:hover { color: #ffb347; }
+
+.av-topo-icone { display: block; font-size: 44px; margin-bottom: 4px; }
+
+/* faixa de informações rápidas */
+.av-fatos { background: white; border-bottom: 1px solid var(--cinza-claro); }
+
+.av-fatos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0;
+}
+
+.av-fato {
+  padding: 26px 24px;
+  border-right: 1px solid var(--cinza-claro);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.av-fato:last-child { border-right: none; }
+
+.av-fato span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--laranja);
+}
+
+.av-fato strong { font-size: 15px; color: var(--preto); font-weight: 600; line-height: 1.4; }
+
+/* sobre + foto */
+.av-sobre { background: var(--off-white); padding: 80px 0; }
+
+.av-sobre-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.av-sobre-texto h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 3.5vw, 36px);
+  margin: 6px 0 20px;
+}
+
+.av-sobre-texto p { color: var(--cinza-texto); font-size: 15.5px; line-height: 1.85; margin-bottom: 14px; }
+
+.av-link-relacionado { display: inline-block; margin-top: 8px; color: var(--verde); font-weight: 600; font-size: 14px; }
+.av-link-relacionado:hover { color: var(--laranja); }
+
+.av-sobre-foto { border-radius: 20px; overflow: hidden; aspect-ratio: 4 / 3; box-shadow: var(--sombra); }
+.av-sobre-foto img { width: 100%; height: 100%; object-fit: cover; }
+
+/* destaques */
+.av-destaques { background: white; padding: 70px 0; }
+
+.av-destaques-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.av-destaque {
+  background: var(--off-white);
+  border-left: 4px solid var(--laranja);
+  border-radius: 20px;
+  padding: 26px 26px 24px;
+}
+
+.av-destaque h3 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 8px; color: var(--verde); }
+.av-destaque p { color: var(--cinza-texto); font-size: 14px; line-height: 1.7; }
+
+/* reservar */
+.av-reservar { background: white; padding: 80px 0; border-top: 1px solid var(--cinza-claro); }
+
+.av-em-breve {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--off-white);
+  border-radius: 20px;
+  padding: 36px 32px;
+}
+
+.av-em-breve p { color: var(--cinza-texto); font-size: 15px; line-height: 1.8; margin-bottom: 22px; }
+
+.av-operadores { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+.av-operador {
+  background: var(--off-white);
+  border-radius: 20px;
+  padding: 28px;
+  border-left: 5px solid var(--laranja);
+}
+
+.av-operador h3 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 8px; }
+.av-operador p { color: var(--cinza-texto); font-size: 14px; line-height: 1.7; margin-bottom: 18px; }
+.av-operador-acoes { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.av-btn {
+  background: var(--verde);
+  color: white;
+  border: 1.5px solid var(--verde);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 100px;
+  transition: background var(--transicao), color var(--transicao);
+}
+
+.av-btn:hover { background: var(--verde-claro); border-color: var(--verde-claro); }
+.av-btn.secundario { background: transparent; color: var(--verde); }
+.av-btn.secundario:hover { background: var(--verde); color: white; }
+
+/* outras modalidades */
+.av-outros { background: var(--off-white); padding: 56px 0 72px; text-align: center; }
+
+.av-outros-titulo {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--laranja);
+  margin-bottom: 16px;
+}
+
+.av-outros-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+
+.av-outros-chips a {
+  background: white;
+  border: 1px solid var(--cinza-claro);
+  color: var(--cinza-texto);
+  font-size: 14px;
+  padding: 10px 18px;
+  border-radius: 100px;
+  transition: border-color var(--transicao), color var(--transicao);
+}
+
+.av-outros-chips a:hover { border-color: var(--verde); color: var(--verde); }
+
+/* não encontrado */
+.av-nao-encontrado { padding: 180px 0 120px; text-align: center; background: var(--off-white); }
+.av-nao-encontrado h1 { font-family: 'Playfair Display', serif; font-size: 34px; margin-bottom: 12px; }
+.av-nao-encontrado p { color: var(--cinza-texto); margin-bottom: 24px; }
+
+/* ── RESPONSIVO ── */
+@media (max-width: 960px) {
+  .av-grid { grid-template-columns: repeat(2, 1fr); }
+  .av-seguranca-grid, .av-sobre-grid { grid-template-columns: 1fr; gap: 28px; }
+}
+
+@media (max-width: 640px) {
+  .av-topo { padding: 120px 0 56px; }
+  .av-grid { grid-template-columns: 1fr; }
+  .av-modalidades, .av-sobre, .av-reservar { padding: 60px 0; }
+  .av-fato { border-right: none; border-bottom: 1px solid var(--cinza-claro); padding: 18px 8px; }
+  .av-fato:last-child { border-bottom: none; }
+  .av-final { padding: 56px 0; }
+}

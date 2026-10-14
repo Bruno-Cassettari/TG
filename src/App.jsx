@@ -13,6 +13,9 @@ import Gastronomia from './pages/Gastronomia';
 import SobreProjeto from './pages/SobreProjeto';
 import Hospedagem from './pages/Hospedagem';
 import PasseioCavalo from './pages/Passeiocavalo';
+import AventuraEsportes from './pages/AventuraEsportes';
+import EsporteDetalhe from './pages/EsporteDetalhe';
+
 
 
 function App() {
@@ -35,6 +38,8 @@ function App() {
         <Route path="/sobre-projeto" element={<SobreProjeto />} />
         <Route path="/hospedagem" element={<Hospedagem />} />
         <Route path="/passeiocavalo" element={<PasseioCavalo />} />
+        <Route path="/aventura" element={<AventuraEsportes />} />
+        <Route path="/aventura/:slug" element={<EsporteDetalhe />} />
       </Routes>
       {!semMoldura && <Footer />}
     </>
