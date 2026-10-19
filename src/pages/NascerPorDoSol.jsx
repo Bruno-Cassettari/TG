@@ -7,6 +7,7 @@ import capapedra from '../assets/images/capapedra.jpeg';
 import capacachu from '../assets/images/capacachu.jpeg';
 import nascerdosol from '../assets/images/nascerdosol.jpg';
 import porbauzinho from '../assets/images/porbauzinho.jpeg'
+import anachata from '../assets/images/anachata.jpg'
 
 
 function NascerPorDoSol() {
@@ -150,7 +151,7 @@ function NascerPorDoSol() {
           {/* CARD 3 — ANA CHATA */}
           <div className="cachoeira-card">
             <div className="cachoeira-foto">
-              <img src={capacachu} alt="Trilha da Ana Chata" />
+              <img src={anachata} alt="Trilha da Ana Chata" />
               <span className="cachoeira-badge">Combine</span>
             </div>
             <div className="cachoeira-info">

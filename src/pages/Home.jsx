@@ -21,15 +21,18 @@ import historia from '../assets/images/historia.jpeg'
 import cavalo from '../assets/images/cavalo.jpg'
 import personalizado from '../assets/images/personalizado.jpg'
 import tour from '../assets/images/tour.jpg'
+import show from '../assets/images/show.png'
+import alerta from '../assets/images/alerta.png'
+import anuncio from '../assets/images/anuncio.png'
 
 
 const NUMERO_WHATSAPP = '5512987100349';
 
 /* Imagens de placeholder — trocar quando tivermos os eventos/novidades reais */
 const NOVIDADES = [
-  { tag: 'Novidade', titulo: 'Hub de São Bento no ar', descricao: 'Agora você encontra esporte, natureza, gastronomia e cultura tudo em um só lugar.', imagem: evento },
-  { tag: 'Evento', titulo: 'Festival de Inverno se aproxima', descricao: 'Fique de olho na agenda cultural da cidade nos próximos meses.', imagem: cultura },
-  { tag: 'Aviso', titulo: 'Condições das trilhas', descricao: 'Confira o clima antes de subir a Pedra do Baú nesta época do ano.', imagem: monjolinho },
+  { tag: 'Novidade', titulo: 'Hub de São Bento no ar', descricao: 'Agora você encontra esporte, natureza, gastronomia e cultura tudo em um só lugar.', imagem: anuncio },
+  { tag: 'Evento', titulo: 'Festival de Inverno se aproxima', descricao: 'Fique de olho na agenda cultural da cidade nos próximos meses.', imagem: show },
+  { tag: 'Aviso', titulo: 'Condições das trilhas', descricao: 'Confira o clima antes de subir a Pedra do Baú nesta época do ano.', imagem: alerta },
 ];
 
 const CATEGORIAS = [
@@ -39,7 +42,7 @@ const CATEGORIAS = [
   { icone: '⛰️', titulo: 'Pedra do Baú', imagem: trilhapedra, rota: '/pedra-do-bau' },
   { icone: '🪂', titulo: 'Aventura & Esportes', imagem: esporte, rota: '/aventura' },
   { icone: '🌅', titulo: 'Nascer & Pôr do Sol', imagem: nascer, rota: '/nascer-por-do-sol' },
-  { icone: '🏛️', titulo: 'Cultura & História', imagem: historia, rota: '/#contato' },
+  { icone: '🏛️', titulo: 'Cultura & História', imagem: historia, rota: '/cultura-historia' },
   { icone: '🐎', titulo: 'Passeios a Cavalo', imagem: cavalo, rota: '/passeiocavalo' },
   { icone: '🚐', titulo: 'City Tour', imagem: personalizado, rota: '/passeios' },
   { icone: '🧭', titulo: 'Passeios Personalizados', imagem: tour, rota: '/personalizado' },

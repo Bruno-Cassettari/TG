@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom';
 import '../styles/sobre-projeto.css';
+import equipe1 from '../assets/images/equipe1.png';
+import equipe2 from '../assets/images/equipe2.png';
 
-/* Para colocar a foto da equipe:
-   1) salve a imagem em src/assets/images/ (ex.: equipe.jpg)
-   2) descomente o import abaixo e troque FOTO_EQUIPE = null por FOTO_EQUIPE = equipe */
-// import equipe from '../assets/images/equipe.jpg';
-const FOTO_EQUIPE = null;
 
-/* Troque pelos nomes reais da equipe */
-const EQUIPE = ['Nome do integrante', 'Nome do integrante', 'Nome do integrante'];
+const MEMBROS = [
+  { nome: 'Bruno Cassettari', foto: equipe1 },
+  { nome: 'João Pedro Barbosa', foto: equipe2 },
+];
 
 function SobreProjeto() {
   return (
@@ -28,23 +27,30 @@ function SobreProjeto() {
             <div className="sp-equipe">
               <span className="sp-equipe-titulo">Desenvolvido por</span>
               <ul>
-                {EQUIPE.map((nome, i) => (
-                  <li key={i}>{nome}</li>
+                {MEMBROS.map((m, i) => (
+                  <li key={i}>{m.nome}</li>
                 ))}
               </ul>
               <small>Curso · UNITAU · Ano</small>
             </div>
           </div>
 
-          <div className="sp-foto">
-            {FOTO_EQUIPE ? (
-              <img src={FOTO_EQUIPE} alt="Equipe do projeto" />
-            ) : (
-              <div className="sp-foto-vazia">
-                <span>📷</span>
-                <small>Foto da equipe</small>
-              </div>
-            )}
+          <div className="sp-fotos">
+            {MEMBROS.map((m, i) => (
+              <figure className="sp-membro" key={i}>
+                <div className="sp-foto">
+                  {m.foto ? (
+                    <img src={m.foto} alt={m.nome} />
+                  ) : (
+                    <div className="sp-foto-vazia">
+                      <span>📷</span>
+                      <small>Foto</small>
+                    </div>
+                  )}
+                </div>
+                <figcaption className="sp-legenda">{m.nome}</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
 
@@ -54,6 +60,9 @@ function SobreProjeto() {
       </div>
     </main>
   );
+  
 }
+
+
 
 export default SobreProjeto;

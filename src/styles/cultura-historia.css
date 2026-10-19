@@ -1,0 +1,326 @@
+/* ════════════════════════════════════════════════════════
+   CULTURA-HISTORIA.CSS
+   Página de Cultura & História: história em linha do tempo,
+   pontos culturais, tradições e ateliês com contato.
+   Mesmas cores, fontes e raios do restante do portal.
+   ════════════════════════════════════════════════════════ */
+
+/* ── TOPO ── */
+.cul-topo {
+  background:
+    radial-gradient(circle at 85% 15%, rgba(224,123,0,0.2), transparent 50%),
+    linear-gradient(160deg, var(--verde-escuro) 0%, var(--verde) 100%);
+  color: white;
+  padding: 150px 0 72px;
+}
+
+.cul-topo h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 5.5vw, 58px);
+  font-weight: 900;
+  line-height: 1.12;
+  margin: 8px 0 18px;
+  max-width: 760px;
+}
+
+.cul-topo p {
+  color: rgba(255,255,255,0.82);
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 620px;
+}
+
+.cul-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.cul-chips a {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  transition: background var(--transicao), color var(--transicao);
+}
+
+.cul-chips a:hover { background: white; color: var(--verde); }
+
+/* ── HISTÓRIA ── */
+.cul-historia {
+  background: white;
+  padding: 90px 0;
+  scroll-margin-top: 80px;
+}
+
+.cul-historia-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.cul-historia-texto h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 38px);
+  margin: 6px 0 18px;
+}
+
+.cul-historia-texto p { color: var(--cinza-texto); font-size: 16px; line-height: 1.85; }
+
+.cul-linha {
+  list-style: none;
+  position: relative;
+  padding-left: 30px;
+  border-left: 3px solid var(--cinza-claro);
+}
+
+.cul-linha li { position: relative; padding-bottom: 32px; }
+.cul-linha li:last-child { padding-bottom: 0; }
+
+.cul-linha li::before {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 4px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--laranja);
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px var(--laranja);
+}
+
+.cul-linha-quando {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--laranja);
+  margin-bottom: 4px;
+}
+
+.cul-linha h3 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 6px; }
+.cul-linha p { color: var(--cinza-texto); font-size: 14.5px; line-height: 1.75; }
+
+/* ── O QUE VISITAR ── */
+.cul-visitar {
+  background: var(--off-white);
+  padding: 90px 0;
+  scroll-margin-top: 80px;
+}
+
+.cul-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cul-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px 26px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.cul-card:hover { transform: translateY(-6px); box-shadow: var(--sombra); }
+
+.cul-card-icone {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(0,78,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.cul-card-foto {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.cul-card-tipo {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--verde);
+  margin-bottom: 6px;
+}
+
+.cul-card h3 { font-family: 'Playfair Display', serif; font-size: 21px; margin-bottom: 8px; }
+
+.cul-card p {
+  color: var(--cinza-texto);
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.cul-link { color: var(--verde); font-weight: 600; font-size: 13.5px; align-self: flex-start; }
+.cul-link:hover { color: var(--laranja); }
+
+/* ── TRADIÇÕES ── */
+.cul-tradicoes {
+  background: linear-gradient(160deg, var(--verde-escuro), var(--verde));
+  color: white;
+  padding: 90px 0;
+  scroll-margin-top: 80px;
+}
+
+.cul-tradicoes .section-header h2 { color: white; }
+
+.cul-tradicoes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cul-tradicao {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 20px;
+  padding: 32px 28px;
+}
+
+.cul-tradicao-icone { font-size: 34px; display: block; margin-bottom: 14px; }
+.cul-tradicao h3 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; }
+.cul-tradicao p { color: rgba(255,255,255,0.8); font-size: 14.5px; line-height: 1.8; }
+
+/* ── ATELIÊS ── */
+.cul-atelies {
+  background: white;
+  padding: 90px 0 80px;
+  scroll-margin-top: 80px;
+}
+
+.cul-atelies-intro {
+  max-width: 600px;
+  margin: 0 auto 44px;
+  text-align: center;
+  color: var(--cinza-texto);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.cul-atelies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.cul-atelie {
+  background: var(--off-white);
+  border-left: 5px solid var(--laranja);
+  border-radius: 20px;
+  padding: 28px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cul-atelie-topo { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+
+.cul-atelie-icone {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.cul-atelie h3 { font-family: 'Playfair Display', serif; font-size: 20px; line-height: 1.25; }
+
+.cul-atelie-local {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--verde);
+}
+
+.cul-atelie p { color: var(--cinza-texto); font-size: 14px; line-height: 1.75; margin-bottom: 20px; flex-grow: 1; }
+
+.cul-atelie-acoes { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.cul-btn {
+  background: var(--verde);
+  color: white;
+  border: 1.5px solid var(--verde);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 100px;
+  transition: background var(--transicao), color var(--transicao);
+}
+
+.cul-btn:hover { background: var(--verde-claro); border-color: var(--verde-claro); }
+.cul-btn.secundario { background: transparent; color: var(--verde); }
+.cul-btn.secundario:hover { background: var(--verde); color: white; }
+
+.cul-aviso { text-align: center; color: var(--cinza-texto); font-size: 13px; margin-top: 28px; }
+
+/* ── CHAMADA FINAL ── */
+.cul-final {
+  background: var(--off-white);
+  padding: 72px 0;
+}
+
+.cul-final-conteudo {
+  background: linear-gradient(160deg, var(--verde-escuro), var(--verde));
+  color: white;
+  border-radius: 20px;
+  padding: 44px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.cul-final h2 { font-family: 'Playfair Display', serif; font-size: clamp(24px, 3.5vw, 32px); margin-bottom: 8px; }
+.cul-final p { color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.7; max-width: 480px; }
+.cul-final-botoes { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.cul-btn-claro {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(255,255,255,0.55);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background var(--transicao), color var(--transicao);
+}
+
+.cul-btn-claro:hover { background: white; color: var(--verde); }
+
+/* ── RESPONSIVO ── */
+@media (max-width: 960px) {
+  .cul-historia-grid { grid-template-columns: 1fr; gap: 40px; }
+  .cul-grid, .cul-tradicoes-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .cul-topo { padding: 120px 0 56px; }
+  .cul-historia, .cul-visitar, .cul-tradicoes, .cul-atelies { padding: 64px 0; }
+  .cul-grid, .cul-tradicoes-grid, .cul-atelies-grid { grid-template-columns: 1fr; }
+  .cul-final-conteudo { padding: 32px 24px; }
+}

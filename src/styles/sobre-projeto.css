@@ -88,25 +88,45 @@
   color: rgba(255,255,255,0.55);
 }
 
-/* ── FOTO ── */
+/* ── FOTOS DOS INTEGRANTES (uma acima da outra) ── */
+.sp-fotos {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+}
+
+.sp-membro {
+  width: 100%;
+  max-width: 340px;
+  margin: 0;
+}
+
 .sp-foto {
   border-radius: 20px;
   overflow: hidden;
-  aspect-ratio: 4 / 5;
   background: var(--azul-card);
   border: 1px solid rgba(255,255,255,0.12);
   box-shadow: 0 20px 50px rgba(0,0,0,0.35);
 }
 
 .sp-foto img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+}
+
+.sp-legenda {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
 }
 
 .sp-foto-vazia {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1 / 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,7 +135,7 @@
   color: rgba(255,255,255,0.55);
 }
 
-.sp-foto-vazia span { font-size: 48px; }
+.sp-foto-vazia span { font-size: 40px; }
 .sp-foto-vazia small { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; }
 
 /* ── BOTÃO VOLTAR ── */
@@ -146,7 +166,8 @@
 /* ── RESPONSIVO ── */
 @media (max-width: 860px) {
   .sp-grid { grid-template-columns: 1fr; gap: 36px; }
-  .sp-foto { aspect-ratio: 4 / 3; order: -1; }
+  .sp-fotos { order: -1; }
   .sp-btn { width: 100%; text-align: center; }
   .sp-voltar { margin-top: 40px; }
 }
+

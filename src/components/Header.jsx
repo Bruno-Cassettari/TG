@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/header.css';
+import logo from '../assets/images/logo.png';
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,11 +36,7 @@ function Header() {
       <header id="header" className={scrolled ? 'scrolled' : ''}>
         <div className="header-inner">
           <Link to="/" className="logo-link">
-            <div className="logo-mark">SBS</div>
-            <div className="logo-text">
-              <span className="logo-title">São Bento</span>
-              <span className="logo-sub">do Sapucaí</span>
-            </div>
+            <img src={logo} alt="São Bento do Sapucaí" className="logo-img" />
           </Link>
 
           <nav className="nav-desktop">
