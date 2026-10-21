@@ -26,7 +26,11 @@ import alerta from '../assets/images/alerta.png'
 import anuncio from '../assets/images/anuncio.png'
 
 
-const NUMERO_WHATSAPP = '5512987100349';
+const NUMERO_WHATSAPP = '5512996668084';
+/* Frase de abertura de toda mensagem enviada pelo site.
+   O bot do WhatsApp só responde quando a mensagem contém "vim pelo site".
+   Se mudar o texto, mantenha essa expressão e combine com quem programou o bot. */
+const FRASE_SITE = 'Olá, vim pelo site do Hub São Bento do Sapucaí! 👋';
 
 /* Imagens de placeholder — trocar quando tivermos os eventos/novidades reais */
 const NOVIDADES = [
@@ -99,7 +103,7 @@ function Home() {
     setFaqAberto((atual) => (atual === index ? null : index));
   }
 
-  function enviarMensagemWhatsApp() {
+    function enviarMensagemWhatsApp() {
     const nome = nomeRef.current.value.trim();
     const email = emailRef.current.value.trim();
     const whatsapp = whatsappRef.current.value.trim();
@@ -111,11 +115,14 @@ function Home() {
       return;
     }
 
-    let texto = `Olá! Meu nome é ${nome}.\n`;
-    if (email) texto += `E-mail: ${email}\n`;
+    // Monta a mensagem com tudo o que a pessoa preencheu (campos vazios ficam de fora)
+    let texto = `${FRASE_SITE}\n\n`;
+    texto += `Meus dados\n`;
+    texto += `Nome: ${nome}\n`;
     texto += `WhatsApp: ${whatsapp}\n`;
-    if (interesse) texto += `Interesse: ${interesse}\n`;
-    if (mensagem) texto += `Mensagem: ${mensagem}`;
+    if (email) texto += `E-mail: ${email}\n`;
+    if (interesse) texto += `\nInteresse: ${interesse}\n`;
+    if (mensagem) texto += `\nMensagem:\n${mensagem}`;
 
     const url = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(texto)}`;
     window.open(url, '_blank');
@@ -303,12 +310,12 @@ function Home() {
                 <div className="form-group">
                   <label>Interesse</label>
                   <select ref={interesseRef} defaultValue="">
-                    <option value="">Selecione um serviço</option>
-                    <option>City Tour</option>
-                    <option>Passeio Personalizado</option>
-                    <option>Pedra do Baú</option>
-                    <option>Cachoeiras</option>
-                    <option>Trilhas</option>
+                        <option>Gastronomia</option>
+                        <option>Hospedagem</option>
+                        <option>Aventura & Esportes</option>
+                        <option>Passeio a Cavalo</option>
+                        <option>Cultura & História</option>
+                        <option>Quero participar como parceiro</option>
                   </select>
                 </div>
                 <div className="form-group">
