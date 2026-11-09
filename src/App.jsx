@@ -16,6 +16,7 @@ import PasseioCavalo from './pages/Passeiocavalo';
 import AventuraEsportes from './pages/AventuraEsportes';
 import EsporteDetalhe from './pages/EsporteDetalhe';
 import CulturaHistoria from './pages/CulturaHistoria';
+import NaoEncontrada from './pages/NaoEncontrada';
 
 
 
@@ -42,6 +43,7 @@ function App() {
         <Route path="/aventura" element={<AventuraEsportes />} />
         <Route path="/aventura/:slug" element={<EsporteDetalhe />} />
         <Route path="/cultura-historia" element={<CulturaHistoria />} />
+        <Route path="*" element={<NaoEncontrada />} />
       </Routes>
       {!semMoldura && <Footer />}
     </>
