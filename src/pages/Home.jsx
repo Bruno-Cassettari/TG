@@ -1,16 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import capapedra from '../assets/images/capapedra.jpeg';
-import capacachu from '../assets/images/capacachu.jpeg';
-import cultura from '../assets/images/cultura.webp';
-import monjolinho from '../assets/images/monjolinho.jpeg';
-import toboga from '../assets/images/toboga.jpeg';
-import amores from '../assets/images/amores.jpeg';
-import toldi from '../assets/images/toldi.jpg';
-import pedrabau from '../assets/images/pedrabau.png';
 import '../styles/categorias.css';
 import '../styles/novidades.css';
-import evento from '../assets/images/evento.png';
 import gastronomia from '../assets/images/gastronomia.jpg'
 import hospedagem from '../assets/images/img-hospedagem.jpg'
 import trilha from '../assets/images/trilha.jpg'
