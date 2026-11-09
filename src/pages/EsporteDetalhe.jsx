@@ -8,7 +8,7 @@ const NUMERO_WHATSAPP = '5512997171694';
 function linkWhatsApp(esporte, operador) {
   const numero = operador && operador.whatsapp ? operador.whatsapp : NUMERO_WHATSAPP;
   const msg = operador
-    ? `Olá! Vi ${operador.nome} no portal de São Bento do Sapucaí e gostaria de informações sobre ${esporte.nome}.`
+    ? `Olá! Vi ${operador.nome} no Hub Turístico de São Bento do Sapucaí e gostaria de informações sobre ${esporte.nome}.`
     : `Olá! Tenho interesse em ${esporte.nome} em São Bento do Sapucaí e gostaria de mais informações.`;
   return `https://wa.me/${numero}?text=${encodeURIComponent(msg)}`;
 }

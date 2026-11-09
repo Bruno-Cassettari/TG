@@ -146,7 +146,7 @@ function linkMapa(nome, mapa) {
 
 function linkVisita(a) {
   const numero = a.whatsapp || NUMERO_WHATSAPP;
-  const msg = `Olá! Vi o ${a.nome} no portal de São Bento do Sapucaí e gostaria de combinar uma visita.`;
+  const msg = `Olá! Vi o ${a.nome} no Hub Turístico de São Bento do Sapucaí e gostaria de combinar uma visita.`;
   return `https://wa.me/${numero}?text=${encodeURIComponent(msg)}`;
 }
 

@@ -21,11 +21,11 @@ const NUMERO_WHATSAPP = '5512996668084';
 /* Frase de abertura de toda mensagem enviada pelo site.
    O bot do WhatsApp só responde quando a mensagem contém "vim pelo site".
    Se mudar o texto, mantenha essa expressão e combine com quem programou o bot. */
-const FRASE_SITE = 'Olá, vim pelo site do Hub São Bento do Sapucaí! 👋';
+const FRASE_SITE = 'Olá, vim pelo site do Hub Turís São Bento do Sapucaí! 👋';
 
 /* Imagens de placeholder — trocar quando tivermos os eventos/novidades reais */
 const NOVIDADES = [
-  { tag: 'Novidade', titulo: 'Hub de São Bento no ar', descricao: 'Agora você encontra esporte, natureza, gastronomia e cultura tudo em um só lugar.', imagem: anuncio },
+  { tag: 'Novidade', titulo: 'Hub Turístico de São Bento no ar', descricao: 'Agora você encontra esporte, natureza, gastronomia e cultura tudo em um só lugar.', imagem: anuncio },
   { tag: 'Evento', titulo: 'Festival de Inverno se aproxima', descricao: 'Fique de olho na agenda cultural da cidade nos próximos meses.', imagem: show },
   { tag: 'Aviso', titulo: 'Condições das trilhas', descricao: 'Confira o clima antes de subir a Pedra do Baú nesta época do ano.', imagem: alerta },
 ];
@@ -188,7 +188,7 @@ function Home() {
               <span className="label">Quem somos</span>
               <h2>Apaixonados por São Bento do Sapucaí</h2>
               <p>
-                Somos um portal turístico dedicado a conectar visitantes com tudo que a
+                Somos um hub turístico dedicado a conectar visitantes com tudo que a
                 cidade tem de melhor — das cachoeiras cristalinas às trilhas da Pedra do
                 Baú. Oferecemos roteiros personalizados, indicações de gastronomia local
                 e contato direto com os melhores guias da região.
@@ -216,7 +216,7 @@ function Home() {
         <section className="categorias" id="categorias">
           <div className="container">
             <div className="section-header">
-              <span className="label">O hub de São Bento</span>
+              <span className="label">O hub turístico de São Bento</span>
               <h2>Tudo o que a cidade oferece, por categoria</h2>
             </div>
             <p className="categorias-intro">

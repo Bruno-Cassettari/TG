@@ -70,7 +70,7 @@ const PASSOS = [
 
 function linkWhatsApp(roteiro) {
   const msg = roteiro
-    ? `Olá! Vi o roteiro "${roteiro}" de passeio a cavalo no portal de São Bento do Sapucaí e gostaria de mais informações.`
+    ? `Olá! Vi o roteiro "${roteiro}" de passeio a cavalo no Hub Turístico de São Bento do Sapucaí e gostaria de mais informações.`
     : 'Olá! Gostaria de informações sobre os passeios a cavalo em São Bento do Sapucaí.';
   return `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(msg)}`;
 }

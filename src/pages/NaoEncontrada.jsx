@@ -7,7 +7,7 @@ function NaoEncontrada() {
         Página não encontrada
       </h1>
       <p style={{ color: 'var(--cinza-texto)', marginBottom: 24 }}>
-        O endereço que você acessou não existe no portal.
+        O endereço que você acessou não existe no nosso Hub Turístico de São Bento do Sapucaí.
       </p>
       <Link to="/" className="btn-primary">← Voltar para a página inicial</Link>
     </section>

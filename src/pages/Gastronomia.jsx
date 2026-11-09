@@ -59,7 +59,7 @@ const RESTAURANTES = [
     descricao:
       'Hamburgueria artesanal para a noite. Perfeita para um lanche descontraído depois de um dia inteiro de passeio.',
     destaques: ['Artesanal', 'Noite'],
-    foto: leo,
+    foto: leao,
     whatsapp: '',
     mapa: '',
   },
@@ -223,7 +223,7 @@ function Gastronomia() {
             <div>
               <span className="label label-light">Para quem tem restaurante</span>
               <h2>Seu restaurante também pode estar aqui</h2>
-              <p>Entre no hub de São Bento e seja encontrado por quem está planejando a viagem.</p>
+              <p>Entre no Hub Turístico de São Bento e seja encontrado por quem está planejando a viagem.</p>
             </div>
             <Link to="/#contato" className="btn-primary">Quero participar</Link>
           </div>

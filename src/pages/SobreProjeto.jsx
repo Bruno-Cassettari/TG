@@ -16,9 +16,9 @@ function SobreProjeto() {
         <div className="sp-grid">
           <div className="sp-texto">
             <span className="sp-label">Sobre o projeto</span>
-            <h1>Quem está por trás do portal</h1>
+            <h1>Quem está por trás do Hub Turístico</h1>
             <p>
-              Este portal é o nosso Trabalho de Graduação na Universidade de Taubaté
+              Este hub é o nosso Trabalho de Graduação na Universidade de Taubaté
               (UNITAU). A ideia é reunir em um só lugar tudo o que São Bento do Sapucaí
               oferece, de esporte e natureza a gastronomia e cultura, e facilitar o
               contato entre quem visita e quem oferece o serviço.
