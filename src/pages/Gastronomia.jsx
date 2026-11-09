@@ -59,7 +59,7 @@ const RESTAURANTES = [
     descricao:
       'Hamburgueria artesanal para a noite. Perfeita para um lanche descontraído depois de um dia inteiro de passeio.',
     destaques: ['Artesanal', 'Noite'],
-    foto: leao,
+    foto: leo,
     whatsapp: '',
     mapa: '',
   },
