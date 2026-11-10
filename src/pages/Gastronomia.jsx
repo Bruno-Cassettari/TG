@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/gastronomia.css';
 import sabordaserra from '../assets/images/sabordaserra.jpg';
 import taipa from '../assets/images/taipa.jpg';
-import leao from '../assets/images/leao.png';
+import leao from '../assets/images/leao.webp';
 import japa from '../assets/images/japa.jpg';
 
 

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../styles/tour.css';
-import capapedra from '../assets/images/capapedra.jpeg';
-import capacachu from '../assets/images/capacachu.jpeg';
+import capapedra from '../assets/images/capapedra.webp';
+import capacachu from '../assets/images/capacachu.webp';
 import cultura from '../assets/images/cultura.webp';
 
 function Tour() {

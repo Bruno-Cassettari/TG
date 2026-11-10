@@ -2,30 +2,30 @@ import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/categorias.css';
 import '../styles/novidades.css';
-import gastronomia from '../assets/images/gastronomia.jpg'
+import gastronomia from '../assets/images/gastronomia.webp'
 import hospedagem from '../assets/images/img-hospedagem.jpg'
-import trilha from '../assets/images/trilha.jpg'
+import trilha from '../assets/images/trilha.webp'
 import trilhapedra from '../assets/images/trilhapedra.webp'
 import esporte from '../assets/images/esporte.webp'
-import nascer from '../assets/images/nascer.jpg'
-import historia from '../assets/images/historia.jpeg'
-import cavalo from '../assets/images/cavalo.jpg'
-import personalizado from '../assets/images/personalizado.jpg'
+import nascer from '../assets/images/nascer.webp'
+import historia from '../assets/images/historia.webp'
+import cavalo from '../assets/images/cavalo.webp'
+import personalizado from '../assets/images/personalizado.webp'
 import tour from '../assets/images/tour.jpg'
-import show from '../assets/images/show.png'
-import alerta from '../assets/images/alerta.png'
-import anuncio from '../assets/images/anuncio.png'
+import show from '../assets/images/show.webp'
+import alerta from '../assets/images/alerta.webp'
+import anuncio from '../assets/images/anuncio.webp'
 
 
 const NUMERO_WHATSAPP = '5512996668084';
 /* Frase de abertura de toda mensagem enviada pelo site.
    O bot do WhatsApp só responde quando a mensagem contém "vim pelo site".
    Se mudar o texto, mantenha essa expressão e combine com quem programou o bot. */
-const FRASE_SITE = 'Olá, vim pelo site do Hub Turís São Bento do Sapucaí! 👋';
+const FRASE_SITE = 'Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋';
 
 /* Imagens de placeholder — trocar quando tivermos os eventos/novidades reais */
 const NOVIDADES = [
-  { tag: 'Novidade', titulo: 'Hub Turístico de São Bento no ar', descricao: 'Agora você encontra esporte, natureza, gastronomia e cultura tudo em um só lugar.', imagem: anuncio },
+  { tag: 'Novidade', titulo: 'Hub Turístico no ar', descricao: 'Agora você encontra esporte, natureza, gastronomia e cultura tudo em um só lugar.', imagem: anuncio },
   { tag: 'Evento', titulo: 'Festival de Inverno se aproxima', descricao: 'Fique de olho na agenda cultural da cidade nos próximos meses.', imagem: show },
   { tag: 'Aviso', titulo: 'Condições das trilhas', descricao: 'Confira o clima antes de subir a Pedra do Baú nesta época do ano.', imagem: alerta },
 ];
@@ -191,17 +191,17 @@ function Home() {
                 Somos um hub turístico dedicado a conectar visitantes com tudo que a
                 cidade tem de melhor — das cachoeiras cristalinas às trilhas da Pedra do
                 Baú. Oferecemos roteiros personalizados, indicações de gastronomia local
-                e contato direto com os melhores guias da região.
+                e contato direto com guias e prestadores da região.
               </p>
             </div>
             <div className="sobre-numeros">
               <div className="numero-card">
                 <strong>15+</strong>
-                <span>Destinos mapeados</span>
+                <span>Pontos no mapa</span>
               </div>
               <div className="numero-card">
-                <strong>8+</strong>
-                <span>Guias parceiros</span>
+                <strong>6</strong>
+                <span>Modalidades de aventura</span>
               </div>
               <div className="numero-card">
                 <strong>100%</strong>
@@ -216,7 +216,7 @@ function Home() {
         <section className="categorias" id="categorias">
           <div className="container">
             <div className="section-header">
-              <span className="label">O hub turístico de São Bento</span>
+              <span className="label">O Hub Turístico</span>
               <h2>Tudo o que a cidade oferece, por categoria</h2>
             </div>
             <p className="categorias-intro">

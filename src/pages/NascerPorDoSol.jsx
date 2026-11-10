@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import '../styles/cardgrid.css';
 import '../styles/cachoeiras.css';
 import '../styles/nascer-por-do-sol.css';
-import nascerdosol from '../assets/images/nascerdosol.jpg';
-import porbauzinho from '../assets/images/porbauzinho.jpeg'
+import nascerdosol from '../assets/images/nascerdosol.webp';
+import porbauzinho from '../assets/images/porbauzinho.webp'
 import anachata from '../assets/images/anachata.jpg'
 
 

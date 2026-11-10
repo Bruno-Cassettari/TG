@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { ESPORTES } from '../data/esportes';
 import '../styles/aventura.css';
 
-const NUMERO_WHATSAPP = '5512997171694';
+const NUMERO_WHATSAPP = '5512996668084';
 
 const NUMEROS = [
   { valor: '30+', rotulo: 'vias de escalada' },
@@ -11,7 +11,7 @@ const NUMEROS = [
 ];
 
 function linkWhatsApp() {
-  const msg = 'Olá! Gostaria de ajuda para escolher uma atividade de aventura em São Bento do Sapucaí.';
+  const msg = 'Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋 Gostaria de ajuda para escolher uma atividade de aventura em São Bento do Sapucaí.';
   return `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(msg)}`;
 }
 

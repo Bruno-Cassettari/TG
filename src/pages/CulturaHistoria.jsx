@@ -4,7 +4,7 @@ import '../styles/cultura-historia.css';
 /* Quando o ateliê não tem WhatsApp cadastrado, o botão "Combinar visita"
    fala com o portal (mediador). Preencha o campo whatsapp do ateliê para
    falar direto com ele (DDI+DDD, só dígitos, ex.: '5512999999999'). */
-const NUMERO_WHATSAPP = '5512997171694';
+const NUMERO_WHATSAPP = '5512996668084';
 
 /* Foto opcional de cada item: importe a imagem e use no campo foto.
    Sem foto, o card mostra o ícone. */
@@ -146,12 +146,12 @@ function linkMapa(nome, mapa) {
 
 function linkVisita(a) {
   const numero = a.whatsapp || NUMERO_WHATSAPP;
-  const msg = `Olá! Vi o ${a.nome} no Hub Turístico de São Bento do Sapucaí e gostaria de combinar uma visita.`;
+  const msg = `Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋! Vi o ${a.nome} no Hub Turístico de São Bento do Sapucaí e gostaria de combinar uma visita.`;
   return `https://wa.me/${numero}?text=${encodeURIComponent(msg)}`;
 }
 
 function linkRoteiro() {
-  const msg = 'Olá! Gostaria de um roteiro cultural em São Bento do Sapucaí.';
+  const msg = 'Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋! Gostaria de um roteiro cultural em São Bento do Sapucaí.';
   return `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(msg)}`;
 }
 

@@ -17,12 +17,12 @@
    relacionado: link opcional para outra página do portal.
    ════════════════════════════════════════════════════════ */
 
-import escalada from '../assets/images/escalada.jpg';
+import escalada from '../assets/images/escalada.webp';
 import ferrata from '../assets/images/ferrata.jpg';
-import rapel from '../assets/images/rapel.jpg';
-import voo from '../assets/images/voo.png';
-import bike from '../assets/images/bike.jpg';
-import indomit from '../assets/images/indomit.jpg';
+import rapel from '../assets/images/rapel.webp';
+import voo from '../assets/images/voo.webp';
+import bike from '../assets/images/bike.webp';
+import indomit from '../assets/images/indomit.webp';
 
 export const ESPORTES = [
   {

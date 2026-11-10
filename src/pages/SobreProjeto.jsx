@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../styles/sobre-projeto.css';
-import equipe1 from '../assets/images/equipe1.png';
-import equipe2 from '../assets/images/equipe2.png';
+import equipe1 from '../assets/images/equipe1.webp';
+import equipe2 from '../assets/images/equipe2.webp';
 
 
 const MEMBROS = [
@@ -16,7 +16,7 @@ function SobreProjeto() {
         <div className="sp-grid">
           <div className="sp-texto">
             <span className="sp-label">Sobre o projeto</span>
-            <h1>Quem está por trás do Hub Turístico</h1>
+            <h1>Quem está por trás do hub</h1>
             <p>
               Este hub é o nosso Trabalho de Graduação na Universidade de Taubaté
               (UNITAU). A ideia é reunir em um só lugar tudo o que São Bento do Sapucaí

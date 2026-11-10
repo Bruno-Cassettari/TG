@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import '../styles/passeiocavalo.css';
 
 
-const NUMERO_WHATSAPP = '5512997171694';
+const NUMERO_WHATSAPP = '5512996668084';
 const INSTAGRAM = 'https://instagram.com/saosebastiaocavalgadas';
 
 
@@ -70,8 +70,8 @@ const PASSOS = [
 
 function linkWhatsApp(roteiro) {
   const msg = roteiro
-    ? `Olá! Vi o roteiro "${roteiro}" de passeio a cavalo no Hub Turístico de São Bento do Sapucaí e gostaria de mais informações.`
-    : 'Olá! Gostaria de informações sobre os passeios a cavalo em São Bento do Sapucaí.';
+    ? `Olá vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋! Vi o roteiro "${roteiro}" de passeio a cavalo no Hub Turístico de São Bento do Sapucaí e gostaria de mais informações.`
+    : 'Olá vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋 Gostaria de informações sobre os passeios a cavalo em São Bento do Sapucaí.';
   return `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(msg)}`;
 }
 

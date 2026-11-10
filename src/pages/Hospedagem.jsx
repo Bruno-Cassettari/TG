@@ -8,8 +8,8 @@ import '../styles/hospedagem.css';
    import capa from '../assets/images/capa-hospedagem.jpg'; e FOTO_CAPA = capa */
 const FOTO_CAPA = null;
 
-/* ⚠️ DADOS DE EXEMPLO — nomes e textos inventados só para mostrar o layout.
-   Troque pelas hospedagens reais.
+/* DADOS REUNIDOS DE GUIAS DE VIAGEM (nov/2026), os mesmos da base do assistente.
+   Confirmar com cada hospedagem antes de divulgar contato ou fotos.
 
    tipo:      'Pousada', 'Chalé', 'Hotel'... (alimenta o filtro automaticamente)
    local:     texto curto abaixo do nome (ex.: 'Centro da cidade')
@@ -20,53 +20,53 @@ const FOTO_CAPA = null;
    mapa:      link do Google Maps (opcional). */
 const HOSPEDAGENS = [
   {
-    id: 'chale-mirante-da-pedra-do-bau',
-    nome: 'Chalé Mirante da Pedra do Baú',
-    icone: '🏔️',
-    tipo: 'Chalé',
-    local: 'Com vista para a serra',
-    descricao:
-      'Chalé para quem quer acordar de frente para a serra e ficar perto das trilhas da Pedra do Baú. Ideal para casais e pequenos grupos.',
-    comodidades: ['☕ Café da manhã', '🅿️ Estacionamento', '🌄 Vista para a serra'],
-    fotos: [],
-    whatsapp: '',
-    mapa: '',
-  },
-  {
-    id: 'pousada-no-centro',
-    nome: 'Pousada no Centro',
-    icone: '🏡',
+    id: 'pousada-lua-bonita',
+    nome: 'Pousada Lua Bonita',
+    icone: '🌙',
     tipo: 'Pousada',
-    local: 'Centro da cidade',
+    local: 'Chalés com vista para o vale',
     descricao:
-      'Pousada no centro, perfeita para quem prefere resolver tudo a pé: restaurantes, comércio e saída para os passeios.',
-    comodidades: ['☕ Café da manhã', '📶 Wi-Fi', '🚶 Perto de tudo'],
+      'Pousada com chalés com vista para o vale. Os chalés têm sala, TV, frigobar e lareira, e a pousada tem jardim e terraço. Café da manhã bem avaliado.',
+    comodidades: ['🔥 Lareira nos chalés', '📺 TV e frigobar', '🌿 Jardim e terraço', '☕ Café da manhã'],
     fotos: [],
     whatsapp: '',
     mapa: '',
   },
   {
-    id: 'pousada-quilombo',
-    nome: 'Pousada Quilombo',
+    id: 'pousada-villa-da-montanha',
+    nome: 'Pousada Villa da Montanha',
+    icone: '🏔️',
+    tipo: 'Pousada',
+    local: 'Chalés pela propriedade',
+    descricao:
+      'Pousada com chalés espalhados pela propriedade, piscina ao ar livre e hidromassagem em alguns quartos. Café da manhã simples e bem avaliado.',
+    comodidades: ['🏊 Piscina ao ar livre', '🛁 Hidromassagem em alguns quartos', '☕ Café da manhã'],
+    fotos: [],
+    whatsapp: '',
+    mapa: '',
+  },
+  {
+    id: 'pousada-canto-da-lua',
+    nome: 'Pousada Canto da Lua',
     icone: '🌿',
     tipo: 'Pousada',
-    local: 'Região do Quilombo',
+    local: 'A cerca de 1 km do centro',
     descricao:
-      'Pousada em ambiente tranquilo, boa para descansar depois de um dia inteiro de trilha e cachoeira.',
-    comodidades: ['🅿️ Estacionamento', '📶 Wi-Fi', '🌳 Ambiente tranquilo'],
+      'Pousada com chalés a cerca de 1 km do centro, cercada por vegetação. Os chalés têm lareira, e a pousada tem piscina aquecida, hidromassagem e sauna. Café da manhã bem avaliado.',
+    comodidades: ['🏊 Piscina aquecida', '🛁 Hidromassagem', '🧖 Sauna', '🔥 Lareira nos chalés'],
     fotos: [],
     whatsapp: '',
     mapa: '',
   },
   {
-    id: 'pousada-recanto-da-praca',
-    nome: 'Pousada Recanto da Praça',
-    icone: '🛏️',
+    id: 'pousada-do-quilombo',
+    nome: 'Pousada do Quilombo',
+    icone: '🏡',
     tipo: 'Pousada',
-    local: 'Centro da cidade',
+    local: 'São Bento do Sapucaí',
     descricao:
-      'Outra opção no centro, com clima acolhedor para quem quer conforto e facilidade para circular pela cidade.',
-    comodidades: ['☕ Café da manhã', '🏊 Piscina', '📶 Wi-Fi'],
+      'Pousada com spa com hidromassagem e massagens, academia, sala de jogos, duas piscinas ao ar livre, bar e restaurante. Quartos com lareira, varanda, TV e frigobar. Café da manhã em geral incluído na diária.',
+    comodidades: ['💆 Spa e massagens', '🏊 Duas piscinas', '🍽️ Bar e restaurante', '🏋️ Academia'],
     fotos: [],
     whatsapp: '',
     mapa: '',
@@ -268,6 +268,7 @@ function Hospedagem() {
           </div>
 
           <p className="gastro-aviso">
+            Informações reunidas de guias de viagem (nov/2026) e não fornecidas pelas hospedagens.
             Valores e disponibilidade variam conforme a época do ano. Confirme direto com a hospedagem.
           </p>
 

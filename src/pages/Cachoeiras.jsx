@@ -3,7 +3,7 @@ import '../styles/cardgrid.css';
 import '../styles/cachoeiras.css';
 import monjolinho from '../assets/images/monjolinho.jpeg';
 import amores from '../assets/images/amores.jpeg';
-import toldi from '../assets/images/toldi.jpg';
+import toldi from '../assets/images/toldi.webp';
 import toboga from '../assets/images/toboga.jpeg';
 
 function Cachoeiras() {
@@ -50,7 +50,7 @@ function Cachoeiras() {
           {/* CARD 1 */}
           <div className="cachoeira-card">
             <div className="cachoeira-foto">
-              <img src={monjolinho} alt="Cachoeira do Mojolinha" />
+              <img src={monjolinho} alt="Cachoeira do Monjolinho" />
               <span className="cachoeira-badge">Destaque</span>
             </div>
             <div className="cachoeira-info">
@@ -61,9 +61,9 @@ function Cachoeiras() {
                   <span className="tag">🏊 Piscina natural</span>
                 </div>
               </div>
-              <h2>Cachoeira do Mojolinho</h2>
+              <h2>Cachoeira do Monjolinho</h2>
               <p>
-                Uma das mais procuradas da região, a Cachoeira do Mojolinha encanta pela
+                Uma das mais procuradas da região, a Cachoeira do Monjolinho encanta pela
                 queda d'água de aproximadamente 12 metros que deságua numa piscina natural
                 de águas frias e transparentes. O acesso é feito por uma trilha leve de
                 cerca de 20 minutos, ideal para famílias e iniciantes.
@@ -71,7 +71,7 @@ function Cachoeiras() {
               <div className="cachoeira-detalhes">
                 <div className="detalhe-item">
                   <span className="detalhe-icone">📍</span>
-                  <span>Estrada do Mojolinho, zona rural</span>
+                  <span>Estrada do Monjolinho, zona rural</span>
                 </div>
                 <div className="detalhe-item">
                   <span className="detalhe-icone">⏱️</span>
@@ -84,7 +84,7 @@ function Cachoeiras() {
               </div>
               <div className="cachoeira-btns">
                 <a
-                  href="https://www.google.com/maps/search/Cachoeira+do+Mojolinha+São+Bento+do+Sapucaí"
+                  href="https://www.google.com/maps/search/Cachoeira+do+Monjolinho+São+Bento+do+Sapucaí"
                   target="_blank"
                   rel="noreferrer"
                   className="btn-localizacao"
@@ -230,7 +230,7 @@ function Cachoeiras() {
               </div>
               <div className="cachoeira-btns">
                 <a
-                  href="https://www.google.com/maps/search/Cachoeira+do+Poção+São+Bento+do+Sapucaí"
+                  href="https://www.google.com/maps/search/Cachoeira+do+Tobogã+São+Bento+do+Sapucaí"
                   target="_blank"
                   rel="noreferrer"
                   className="btn-localizacao"
