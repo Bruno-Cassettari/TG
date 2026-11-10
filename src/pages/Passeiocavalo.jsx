@@ -70,8 +70,8 @@ const PASSOS = [
 
 function linkWhatsApp(roteiro) {
   const msg = roteiro
-    ? `Olá vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋! Vi o roteiro "${roteiro}" de passeio a cavalo no Hub Turístico de São Bento do Sapucaí e gostaria de mais informações.`
-    : 'Olá vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋 Gostaria de informações sobre os passeios a cavalo em São Bento do Sapucaí.';
+    ? `Olá vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋! Vi o roteiro "${roteiro}" de passeio a cavalo no Hub Turístico de São Bento do Sapucaí e gostaria de mais informações! Pode me ajudar, Chico? 👋`
+    : 'Olá vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋 Gostaria de informações sobre os passeios a cavalo em São Bento do Sapucaí! Pode me ajudar, Chico? 👋';
   return `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(msg)}`;
 }
 

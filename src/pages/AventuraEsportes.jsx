@@ -11,7 +11,7 @@ const NUMEROS = [
 ];
 
 function linkWhatsApp() {
-  const msg = 'Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋 Gostaria de ajuda para escolher uma atividade de aventura em São Bento do Sapucaí.';
+  const msg = 'Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋 Gostaria de ajuda para escolher uma atividade de aventura em São Bento do Sapucaí! Pode me ajudar, Chico? 👋';
   return `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(msg)}`;
 }
 

@@ -4,7 +4,7 @@ import '../styles/personalizado.css';
 
 const NUMERO_WHATSAPP = '5512996668084';
 
-const FRASE_SITE = 'Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋';
+const FRASE_SITE = 'Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! Pode me ajudar, Chico? 👋';
 
 const OPCOES_INTERESSE = [
   { valor: 'Cachoeiras', icone: '💧' },

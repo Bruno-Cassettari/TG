@@ -146,12 +146,12 @@ function linkMapa(nome, mapa) {
 
 function linkVisita(a) {
   const numero = a.whatsapp || NUMERO_WHATSAPP;
-  const msg = `Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋! Vi o ${a.nome} no Hub Turístico de São Bento do Sapucaí e gostaria de combinar uma visita.`;
+  const msg = `Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋! Vi o ${a.nome} no Hub Turístico de São Bento do Sapucaí e gostaria de combinar uma visita! Pode me ajudar, Chico? 👋`;
   return `https://wa.me/${numero}?text=${encodeURIComponent(msg)}`;
 }
 
 function linkRoteiro() {
-  const msg = 'Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋! Gostaria de um roteiro cultural em São Bento do Sapucaí.';
+  const msg = 'Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋! Gostaria de um roteiro cultural em São Bento do Sapucaí! Pode me ajudar, Chico? 👋';
   return `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(msg)}`;
 }
 

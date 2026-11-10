@@ -15,13 +15,16 @@ import tour from '../assets/images/tour.jpg'
 import show from '../assets/images/show.webp'
 import alerta from '../assets/images/alerta.webp'
 import anuncio from '../assets/images/anuncio.webp'
+import '../styles/assistente.css';
+import chico from '../assets/images/chico.webp'
 
+const FOTO_CHICO = chico;
 
 const NUMERO_WHATSAPP = '5512996668084';
 /* Frase de abertura de toda mensagem enviada pelo site.
    O bot do WhatsApp só responde quando a mensagem contém "vim pelo site".
    Se mudar o texto, mantenha essa expressão e combine com quem programou o bot. */
-const FRASE_SITE = 'Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋';
+const FRASE_SITE = 'Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! Pode me ajudar, Chico? 👋';
 
 /* Imagens de placeholder — trocar quando tivermos os eventos/novidades reais */
 const NOVIDADES = [
@@ -237,6 +240,49 @@ function Home() {
             </div>
           </div>
         </section>     
+
+
+            {/* ── ASSISTENTE VIRTUAL (CHICO) ── */}
+      <section className="chico" id="assistente">
+        <div className="container">
+          <div className="chico-box">
+            <div className="chico-texto">
+              <span className="label label-light">Assistente virtual</span>
+              <h2>Conheça o Chico</h2>
+              <p>
+                O Chico é o assistente virtual do Portal Turístico São Bento do Sapucaí. Pelo
+                WhatsApp, ele tira suas dúvidas sobre atrativos, restaurantes e hospedagens da cidade.
+              </p>
+              <ul className="chico-exemplos">
+                <li>Quais cachoeiras vale conhecer?</li>
+                <li>Onde almoçar na cidade?</li>
+                <li>Quais pousadas tem no centro?</li>
+              </ul>
+              <a
+                className="btn-primary"
+                href={`https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(FRASE_SITE)}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                💬 Falar com o Chico
+              </a>
+              <small className="chico-nota">O WhatsApp abre com a mensagem pronta. É só enviar.</small>
+            </div>
+
+            <div className="chico-imagem">
+              {FOTO_CHICO ? (
+                <img src={FOTO_CHICO} alt="Chico, o assistente virtual do portal" />
+              ) : (
+                <div className="chico-vazio">
+                  <span>🤖</span>
+                  <small>Imagem do Chico em breve</small>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
+
 
       {/* ── FAQ ── */}
       <section className="faq" id="faq">
