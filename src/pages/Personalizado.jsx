@@ -2,7 +2,9 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/personalizado.css';
 
-const NUMERO_WHATSAPP = '5512997171694';
+const NUMERO_WHATSAPP = '5512996668084';
+
+const FRASE_SITE = 'Olá, vim pelo site do Hub Turístico – São Bento do Sapucaí! 👋';
 
 const OPCOES_INTERESSE = [
   { valor: 'Cachoeiras', icone: '💧' },
@@ -59,7 +61,7 @@ function Personalizado() {
 
     const dataFormatada = formatarData(data);
 
-    let texto = `*Pedido de Passeio Personalizado*\n\n`;
+   let texto = `${FRASE_SITE}\n\n*Pedido de Passeio Personalizado*\n\n`;
     texto += `Nome: ${nome}\n`;
     texto += `WhatsApp: ${whatsapp}\n`;
     if (email) texto += `E-mail: ${email}\n`;
