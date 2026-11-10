@@ -16,7 +16,7 @@ import show from '../assets/images/show.webp'
 import alerta from '../assets/images/alerta.webp'
 import anuncio from '../assets/images/anuncio.webp'
 import '../styles/assistente.css';
-import chico from '../assets/images/chico.webp'
+import chico from '../assets/images/chico.png'
 
 const FOTO_CHICO = chico;
 
@@ -50,7 +50,7 @@ const FAQ_ITENS = [
   {
     pergunta: 'Como faço para reservar?',
     resposta:
-      'Entre em contato via WhatsApp ou pelo formulário abaixo. Respondemos em até 24h com opções de roteiro e valores.',
+      'Entre em contato com a gente pelo WhatsApp ou pelo formulário abaixo. Nós redirecionamos você para o profissional ou a empresa que vai oferecer o serviço que você solicitou.',
   },
   {
     pergunta: 'Posso personalizar o roteiro?',
@@ -58,9 +58,9 @@ const FAQ_ITENS = [
       'Sim! Todos os nossos roteiros são adaptáveis. Nos conte seus interesses, tempo disponível e nível de condicionamento físico.',
   },
   {
-    pergunta: 'Precisa pagar antecipado?',
+    pergunta: 'Quais tipos de passeio e serviço vocês indicam?',
     resposta:
-      'É necessário um sinal para confirmar a reserva. O restante é pago no dia do passeio, em dinheiro ou PIX.',
+      'Reunimos trilhas, cachoeiras, aventura e esportes, passeios a cavalo, gastronomia, hospedagem e cultura. Explore as categorias nesta página ou fale com a gente para receber indicações.',
   },
   {
     pergunta: 'Os passeios aceitam crianças?',
@@ -279,6 +279,7 @@ function Home() {
                 </div>
               )}
             </div>
+          </div>
           </div>
         </section>
 
